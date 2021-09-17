@@ -4,10 +4,10 @@
 
 | Name | Github | Email | iD |
 | --- | --- | --- | --- |
-| Yuhuan Zhou | --- | --- | 149528192 |
-| Xiaozhuan Li | --- | --- | 162683189 |
-| Qianwen Sun | --- | --- | 103335188 |
-| Dusheng Yuan | --- | --- | 151383171 |
+| Yuhuan Zhou | yh-evan | yh.evanz@gmail.com | 149528192 |
+| Xiaozhuan Li | --- | xli403@myseneca.ca | 162683189 |
+| Qianwen Sun | Qianwen Sun | qianwen.sun0131@gmail.com | 103335188 |
+| Dusheng Yuan | DSisme | nmbdeyuan@gmail.com | 151383171 |
 | Yu Li | Jackie-Li091 | yli593@myseneca.ca | 164037178 |
 
 ## Project Description

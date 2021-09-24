@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Group3_Simcoe-North-Dental
 
 ## Members

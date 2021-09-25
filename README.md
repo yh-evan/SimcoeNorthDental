@@ -35,20 +35,20 @@ Customer login/sign up features
 2. homepage interactive enhancement 
 ## 80% 
 1. Customer dashboard
-	a.login authentication
-	b.query personal information
-	c.update personal information
+	a. login authentication
+	b. query personal information
+	c. update personal information
 2. Doctor dashboard
-	a.login authentication
-	b.query personal information
-	c.query related patients’ information
+	a. login authentication
+	b. query personal information
+	c. query related patients’ information
 3. Manager dashboard
-	a.login authentication
-	b.query all customer information
-	c.update/delete specific customer 
+	a. login authentication
+	b. query all customer information
+	c. update/delete specific customer 
 4. Live Clinic 
-	a.chat area
-	b.video streaming
+	a. chat area
+	b. video streaming
  ## 100%
 All page’s interactive enhancement
 All page’s responsive design 

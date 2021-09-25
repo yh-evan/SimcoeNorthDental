@@ -17,6 +17,43 @@ Simcoe North Dental is a brand-new dental office located on one of the busiest s
 Create a flexible, educational system that is easy to maintain, and programmers develop a friendly system that can deliver—reliable clinics and services to our key clients. In addition to designing a user-friendly system with an intuitive interface, we must also develop a web-based, database-driven administration tool that allows dentists and clients to join live clinics quickly. 
 
 =======
+
+# Percentage of progress
+
+## 10% 
+Customer information API, static REACT homepage layout 
+## 20% 
+ALL Restful API, Interactive homepage enhancement (in progress)
+## 40% 
+Customer login/sign up features 
+a.	registration page/login popup on homepage
+b.	front-end validation 
+c.	service side validation
+## 60% 
+         	1. Manager dashboard / Doctor dashboard / Customer dashboard front-end design and              development
+         	2.homepage interactive enhancement 
+## 80% 
+1. Customer dashboard
+a.	login authentication
+b.	query personal information
+c.	update personal information
+        	2. Doctor dashboard
+		a.   login authentication
+		b.   query personal information
+             c.    query related patients’ information
+
+        	3. Manager dashboard
+		a.   login authentication
+		b.   query all customer information
+             		c.    update/delete specific customer 
+	4. Live Clinic 
+		a.  chat area
+		b.  video streaming
+ ## 100%
+	All page’s interactive enhancement
+	All page’s responsive design 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

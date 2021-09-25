@@ -21,37 +21,37 @@ Create a flexible, educational system that is easy to maintain, and programmers 
 # Percentage of progress
 
 ## 10% 
-Customer information API, static REACT homepage layout 
+### Customer information API, static REACT homepage layout 
 ## 20% 
-ALL Restful API, Interactive homepage enhancement (in progress)
+### ALL Restful API, Interactive homepage enhancement (in progress)
 ## 40% 
-Customer login/sign up features 
+### Customer login/sign up features 
 	a.registration page/login popup on homepage
 	b.front-end validation 
 	c.service side validation
 ## 60% 
-1. Manager dashboard / Doctor dashboard / Customer dashboard front-end design and development
+### 1. Manager dashboard / Doctor dashboard / Customer dashboard front-end design and development
 
-2. homepage interactive enhancement 
+### 2. homepage interactive enhancement 
 ## 80% 
-1. Customer dashboard
+### 1. Customer dashboard
 	a. login authentication
 	b. query personal information
 	c. update personal information
-2. Doctor dashboard
+### 2. Doctor dashboard
 	a. login authentication
 	b. query personal information
 	c. query related patients’ information
-3. Manager dashboard
+### 3. Manager dashboard
 	a. login authentication
 	b. query all customer information
 	c. update/delete specific customer 
-4. Live Clinic 
+### 4. Live Clinic 
 	a. chat area
 	b. video streaming
- ## 100%
-All page’s interactive enhancement
-All page’s responsive design 
+## 100%
+### All page’s interactive enhancement
+### All page’s responsive design 
 
 
 # Getting Started with Create React App

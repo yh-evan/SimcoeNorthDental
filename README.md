@@ -32,7 +32,7 @@ Customer login/sign up features
 ## 60% 
 1. Manager dashboard / Doctor dashboard / Customer dashboard front-end design and development
 
-2.homepage interactive enhancement 
+2. homepage interactive enhancement 
 ## 80% 
 1. Customer dashboard
 	a.login authentication

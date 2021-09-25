@@ -26,32 +26,31 @@ Customer information API, static REACT homepage layout
 ALL Restful API, Interactive homepage enhancement (in progress)
 ## 40% 
 Customer login/sign up features 
-a.	registration page/login popup on homepage
-b.	front-end validation 
-c.	service side validation
+	a.registration page/login popup on homepage
+	b.front-end validation 
+	c.service side validation
 ## 60% 
-         	1. Manager dashboard / Doctor dashboard / Customer dashboard front-end design and              development
-         	2.homepage interactive enhancement 
+1. Manager dashboard / Doctor dashboard / Customer dashboard front-end design and development
+2.homepage interactive enhancement 
 ## 80% 
 1. Customer dashboard
-a.	login authentication
-b.	query personal information
-c.	update personal information
-        	2. Doctor dashboard
-		a.   login authentication
-		b.   query personal information
-             c.    query related patients’ information
-
-        	3. Manager dashboard
-		a.   login authentication
-		b.   query all customer information
-             		c.    update/delete specific customer 
-	4. Live Clinic 
-		a.  chat area
-		b.  video streaming
+	a.login authentication
+	b.query personal information
+	c.update personal information
+2. Doctor dashboard
+	a.login authentication
+	b.query personal information
+	c.query related patients’ information
+3. Manager dashboard
+	a.login authentication
+	b.query all customer information
+	c.update/delete specific customer 
+4. Live Clinic 
+	a.chat area
+	b.video streaming
  ## 100%
-	All page’s interactive enhancement
-	All page’s responsive design 
+All page’s interactive enhancement
+All page’s responsive design 
 
 
 # Getting Started with Create React App

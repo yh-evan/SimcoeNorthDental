@@ -1,0 +1,49 @@
+.introduction {
+  display: flex;
+  width: 100vw;
+}
+
+.introduction-content {
+  align-self: center;
+  color: #00838f;
+  margin-left: 10vw;
+  width: 100vw;
+
+}
+
+.introduction-content h1 {
+  font-size: 2vw;
+}
+
+.introduction-content h1::before {
+  content: '\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0';
+  display: block;
+  position: absolute;
+  text-decoration: underline;
+  text-underline-offset: .4em;
+}
+
+.introduction-content p {
+  font-size: 1vw;
+}
+
+
+.introduction-img {
+  float: top;
+  max-width: 20vw;
+  transform: scaleX(-1);
+  overflow: visible;
+}
+
+.introduction-content button {
+  margin-right: 2vw;
+  border-radius: 20px;
+  border: none;
+  height: 2vw;
+  width: 8vw;
+  background: #00838f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: .8vw;
+}

@@ -20,7 +20,7 @@ Create a flexible, educational system that is easy to maintain, and programmers 
 
 # Percentage of progress
 
-## 10% 
+## - [ ] 10% 
 ### Customer information API, static homepage layout 
 ## 20% 
 ### ALL Restful API, Interactive homepage enhancement (in progress)

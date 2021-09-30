@@ -1,6 +1,7 @@
 .introduction {
   display: flex;
   width: 100vw;
+  background-color: white;
 }
 
 .introduction-content {
@@ -25,19 +26,18 @@
 
 .introduction-content p {
   font-size: 1vw;
+
 }
 
 
 .introduction-img {
-  float: top;
-  max-width: 20vw;
+  max-width: 30vw;
   transform: scaleX(-1);
-  overflow: visible;
 }
 
 .introduction-content button {
   margin-right: 2vw;
-  border-radius: 20px;
+  border-radius: 50px;
   border: none;
   height: 2vw;
   width: 8vw;

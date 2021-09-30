@@ -5,23 +5,20 @@
 
 .welcome-left {
   display: flex;
-  width: 35vw;
-
   background: #f2e9e4;
 }
 
-.welcome-left-img {
-  display: block;
-  max-width: 22vw;
-  margin-top: auto;
-  margin-bottom: auto;
+.welcome-left-video {
+  position: relative;
+  z-index: 10;
 }
 
 .welcome-right {
   display: flex;
   flex-direction: column;
   background: #bee3db;
-  width: 65vw;
+  width: 100vw;
+  box-shadow: .5 .5 .5 .5;
 }
 
 .welcome-right-content {
@@ -40,12 +37,13 @@
   color: #00838f;
   margin-top: 1vh;
   margin-bottom: 2vh;
+  margin-right: 1vw;
   font-size: 4vw;
 }
 
 .welcome-right-button-book {
   margin-right: 2vw;
-  border-radius: 20px;
+  border-radius: 50px;
   border: none;
   height: 2vw;
   width: 8vw;
@@ -57,7 +55,7 @@
 }
 
 .welcome-right-button-call {
-  border-radius: 20px;
+  border-radius: 50px;
   background-color: #bee3db;
   height: 2vw;
   width: 16vw;

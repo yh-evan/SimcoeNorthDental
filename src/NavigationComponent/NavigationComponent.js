@@ -1,6 +1,5 @@
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-
 import "./NavigationComponent.css";
+import { Nav } from "react-bootstrap";
 
 function NavigationComponent() {
   return (
@@ -8,16 +7,18 @@ function NavigationComponent() {
       <div className="navigation-left">
         <img
           className="navigation-left-img"
-          scr="./img/logo_without_characters.png"
+          src="/img/Logo_with_name.png"
           alt="logo"
         ></img>
       </div>
       <div className="navigation-right">
         <Nav className="me-auto">
-          <Nav.Link>Services</Nav.Link>
-          <Nav.Link>About</Nav.Link>
-          <Nav.Link>New Patient</Nav.Link>
-          <Nav.Link>Login</Nav.Link>
+          <Nav.Link className="navigation-right-services">Services</Nav.Link>
+          <Nav.Link className="navigation-right-about">About</Nav.Link>
+          <Nav.Link className="navigation-right-newPatient">
+            New Patient
+          </Nav.Link>
+          <button className="navigation-right-login">Login</button>
         </Nav>
       </div>
     </div>

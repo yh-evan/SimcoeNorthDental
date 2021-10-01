@@ -1,6 +1,7 @@
 .introduction {
   display: flex;
   width: 100vw;
+  height: 50vh;
   background-color: white;
 }
 
@@ -26,7 +27,7 @@
 
 .introduction-content p {
   font-size: 1vw;
-
+  margin-top: 2vh;
 }
 
 

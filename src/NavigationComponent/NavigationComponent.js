@@ -1,5 +1,6 @@
 import "./NavigationComponent.css";
-import { Nav } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Nav, NavDropdown } from "react-bootstrap";
 
 function NavigationComponent() {
   return (
@@ -13,7 +14,16 @@ function NavigationComponent() {
       </div>
       <div className="navigation-right">
         <Nav className="me-auto">
-          <Nav.Link className="navigation-right-services">Services</Nav.Link>
+          <NavDropdown
+            class="navigation-right-service"
+            title="Service"
+            id="collasible-nav-dropdown"
+          >
+            <NavDropdown.Item>Action&nbsp;</NavDropdown.Item>
+            <NavDropdown.Item>Another action&nbsp; </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item>Something else here</NavDropdown.Item>
+          </NavDropdown>
           <Nav.Link className="navigation-right-about">About</Nav.Link>
           <Nav.Link className="navigation-right-newPatient">
             New Patient

@@ -1,5 +1,5 @@
 .navigation {
-  height: 8vh;
+  height: 4em;
   display: flex;
   flex-direction: row;
   width: 100vw;
@@ -12,18 +12,18 @@
 
 .navigation-left {
   display: flex;
-  flex-basis: 80%;
+  flex-basis: 30vw;
   align-items: center;
 }
 
 .navigation-left-img {
   margin-left: 2vw;
-  max-width: 40vh;
+  max-width: 20em;
 
 }
 
 .navigation-right {
-  flex-basis: 20%;
+  flex-basis: 70vw;
   align-items: baseline;
 }
 
@@ -31,19 +31,25 @@
   display: flex;
   flex-direction: row;
   justify-content: right;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   height: 100%;
 }
 
+.me-auto a {
+  margin-right: 2vw;
+  color: #00838f
+}
+
 .navigation-right-login {
   border-radius: 50px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   background-color: #00838f;
   width: 6em;
   height: 2em;
   text-align: center;
   color: white;
   font-weight: bolder;
-  border: none
+  border: none;
+  margin-right: 2vw;
 }

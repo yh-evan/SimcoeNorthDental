@@ -14,6 +14,7 @@ function WelcomeComponent() {
           src="/video/pexels-c-technical-6528836-compressed.mp4"
           loop
           autoPlay
+          muted
           type="video/mov"
         ></video>
         <div className="welcome-left-video-mask"></div>

@@ -19,3 +19,10 @@
 
 ### React framework and folder structure are pushed to the main branch
 - an empty React framwork and source/img/API folder are created
+
+# (September 30th, 2021)
+
+### Homepage update
+- Navigation(Logo, Link, Dropdown menu)
+- Welcome section
+- Introduction section

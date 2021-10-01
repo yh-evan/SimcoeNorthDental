@@ -12,7 +12,7 @@
 
 .navigation-left {
   display: flex;
-  flex-basis: 70%;
+  flex-basis: 80%;
   align-items: center;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .navigation-right {
-  flex-basis: 30%;
+  flex-basis: 20%;
   align-items: baseline;
 }
 

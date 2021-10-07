@@ -1,39 +1,45 @@
 .introduction {
   display: flex;
   width: 100vw;
-  height: 50vh;
-  background-color: white;
+  height: 30vw;
+
 }
 
 .introduction-content {
   align-self: center;
   color: #00838f;
-  margin-left: 10vw;
+  margin-left: 5vw;
   width: 100vw;
-
 }
 
 .introduction-content h1 {
-  font-size: 2vw;
+  font-size: 2em;
 }
 
-.introduction-content h1::before {
-  content: '\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0\a0';
-  display: block;
-  position: absolute;
-  text-decoration: underline;
-  text-underline-offset: .4em;
+.hl {
+  border-bottom: 4px solid #00838f;
+  width: 40px;
+
 }
 
 .introduction-content p {
-  font-size: 1vw;
+  font-size: 1em;
   margin-top: 2vh;
 }
 
+.introduction-right {
+  flex-basis: 60%;
+}
 
-.introduction-img {
-  max-width: 30vw;
-  transform: scaleX(-1);
+.introduction-right-parallax {
+  height: 100%;
+  width: 100%;
+}
+
+
+.introduction-img-1 {
+  transform: translateY(4vw);
+  width: 30vw;
 }
 
 .introduction-content button {

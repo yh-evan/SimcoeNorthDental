@@ -1,14 +1,10 @@
 import "./WelcomeComponent.css";
+import { Background, Parallax } from "react-parallax";
 
 function WelcomeComponent() {
   return (
     <div className="welcome">
       <div className="welcome-left">
-        {/* <img
-          className="welcome-left-img"
-          src="/img/the-humble-cropped.png"
-          alt="welcome-left-img"
-        ></img> */}
         <video
           className="welcome-left-video"
           src="/video/pexels-c-technical-6528836-compressed.mp4"
@@ -20,7 +16,7 @@ function WelcomeComponent() {
         <div className="welcome-left-video-mask"></div>
       </div>
       <div className="welcome-right">
-        <div className="welcome-right-content">
+        <div className="welcome-right-content" data-aos="fade-left">
           <h5>Family Dentist in Oshawa</h5>
           <h1>Meet your neighbors at the Dentist</h1>
           <div className="welcome-right-button">

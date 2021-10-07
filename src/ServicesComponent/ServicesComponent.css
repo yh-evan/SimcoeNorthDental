@@ -1,0 +1,49 @@
+.servicesComponent {
+  height: fit-content;
+}
+
+
+.servicesComponent .card {
+  overflow: hidden;
+  cursor: pointer;
+  color: #bee3db;
+}
+
+.servicesComponent .card-body {
+  visibility: hidden;
+  position: absolute;
+  transform: scaleY(0.1);
+  transform: translateY(-100%);
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.servicesComponent .card:hover>.card-body {
+  visibility: visible;
+  transition: .6s;
+  background-color: #00838fe0;
+  transform: scaleY(1);
+
+}
+
+.servicesComponent .card-mask {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(240, 204, 185, 0.2);
+  top: 0;
+  left: 0;
+  justify-content: center;
+}
+
+.servicesComponent .card-mask p {
+  text-align: center;
+  align-self: center;
+  font-size: 4em;
+  font-weight: bolder;
+  color: rgb(242, 233, 228);
+  opacity: .6;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+}

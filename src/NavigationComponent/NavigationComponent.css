@@ -3,12 +3,16 @@
   display: flex;
   flex-direction: row;
   width: 100vw;
-  background-color: #89b0ae;
   align-content: center;
+  background-color: #89b0ae;
   color: #00838f;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  z-index: 99;
+  box-shadow: 1px 6px 6px -2px rgba(0, 0, 0, 0.2);
 }
+
 
 .navigation-left {
   display: flex;
@@ -41,6 +45,16 @@
   color: #00838f
 }
 
+.me-auto a:hover {
+  color: white;
+  transition: .6s;
+}
+
+.me-auto a:focus {
+  color: white;
+  transition: .6s;
+}
+
 .navigation-right-login {
   border-radius: 50px;
   font-size: 1.1em;
@@ -52,4 +66,14 @@
   font-weight: bolder;
   border: none;
   margin-right: 2vw;
+}
+
+.dropdown-menu a:hover {
+  background-color: #00838f;
+
+}
+
+.dropdown-menu {
+  box-shadow: 1px 6px 6px -2px rgba(0, 0, 0, 0.2);
+
 }

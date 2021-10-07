@@ -7,7 +7,7 @@ function WhatWeCanDoComponent() {
   return (
     <Parallax bgImage="/img/background.png" strength={-200}>
       <div className="whatwecando">
-        <Card className="whatwecando-cards">
+        <Card className="whatwecando-cards" data-aos="fade-left">
           <Card.Body>
             <Card.Title>Family Dentistry</Card.Title>
             <Card.Text>

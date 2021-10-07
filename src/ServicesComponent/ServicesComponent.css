@@ -32,7 +32,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(240, 204, 185, 0.2);
+  background-color: rgba(248, 230, 214, 0.4);
   top: 0;
   left: 0;
   justify-content: center;
@@ -41,7 +41,7 @@
 .servicesComponent .card-mask p {
   text-align: center;
   align-self: center;
-  font-size: 4em;
+  font-size: 2vw;
   font-weight: bolder;
   color: rgb(242, 233, 228);
   opacity: .6;

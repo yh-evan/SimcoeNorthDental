@@ -17,7 +17,7 @@ class IntroductionComponent extends Component {
             for more than 10 years after graduated with a Master degree of
             clinical medicine in Dentistry from Peking University.{" "}
           </p>
-          <button data-aos="fade-up">LEARN MORE</button>
+          <button data-aos="fade-up">Meet Dr.Hu</button>
         </div>
         <div className="introduction-right">
           <Parallax strength={-100} className="introduction-right-parallax">

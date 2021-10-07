@@ -1,5 +1,4 @@
 import "./WelcomeComponent.css";
-import { Background, Parallax } from "react-parallax";
 
 function WelcomeComponent() {
   return (
@@ -18,7 +17,7 @@ function WelcomeComponent() {
       <div className="welcome-right">
         <div className="welcome-right-content" data-aos="fade-left">
           <h5>Family Dentist in Oshawa</h5>
-          <h1>Meet your neighbors at the Dentist</h1>
+          <h1>Meet your neighbors at Simcoe North Dental</h1>
           <div className="welcome-right-button">
             <button className="welcome-right-button-book">BOOK NOW</button>
             <button className="welcome-right-button-call">

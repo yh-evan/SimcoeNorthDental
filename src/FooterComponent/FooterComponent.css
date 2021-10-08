@@ -1,0 +1,50 @@
+.FooterComponent-main {
+
+display: flex;
+width: auto;
+background-color: #89b0ae;
+color: #00838f;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+
+justify-content:space-around ;
+}
+.FooterComponent-service {
+    display: flex;
+    flex-direction: column;
+}
+.FooterComponent-Practice {
+display: flex;
+flex-direction: column;
+
+}
+.FooterComponent-review {
+display: flex;
+flex-direction: column;
+}
+
+
+
+.FooterComponent-office {
+display: flex;
+flex-direction: column;
+
+
+}
+a:link {
+    text-decoration: none;
+    
+
+  }
+  a{
+      color: #00838f;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  

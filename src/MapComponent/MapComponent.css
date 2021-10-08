@@ -1,0 +1,55 @@
+
+.MapComponent-element{  
+    display: flex; 
+  
+}
+.MapComponent-container{
+    display: flex;
+    margin-left: 20vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+
+}
+.MapComponent-map{
+    display: flex;
+     height: 25vw;
+    width: 30vw;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    
+ 
+}
+.MapComponent-gmap {
+    display: flex;
+    width: 100vw;
+   
+  }
+
+
+.text-contact {
+    display: flex;
+    position: absolute;
+flex-direction: column;
+
+
+ background-color: #fff;
+    width: auto;
+    height: auto;
+    left: 40vw;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 2.5vw;
+    box-sizing: border-box;
+   margin: 5vw;
+  }
+
+  .MapComponent-title {
+    height: 15%;
+    font-size: 34px;
+    font-weight: 700;
+    color: rgb(19, 128, 178);
+  }
+  .MapComponent-info {
+    height: 42.5%;
+    font-size: 22px;
+    font-weight: 700;
+  }

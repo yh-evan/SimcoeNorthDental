@@ -1,12 +1,11 @@
+import { Switch, Route } from 'react-router';
 import "./App.css";
+
 import { useEffect } from "react";
-import IntroductionComponent from "./IntroductionComponent/IntroductionComponent";
-import NavigationComponent from "./NavigationComponent/NavigationComponent";
-import WelcomeComponent from "./WelcomeComponent/WelcomeComponent";
-import WhatWeCanDoComponent from "./WhatWeCanDoComponent/WhatWeCanDoComponent";
-import ServicesComponent from "./ServicesComponent/ServicesComponent";
-import MapComponent from "./MapComponent/MapComponent";
-import FooterComponent from "./FooterComponent/FooterComponent";
+
+import Registration from './RegistrationPage/Registration';
+import Home from './HomePage/Home';
+
 import "aos/dist/aos.css";
 import AOS from "aos";
 
@@ -18,15 +17,15 @@ function App() {
     AOS.refresh();
   }, []);
   return (
-    <div className="App">
-      <NavigationComponent></NavigationComponent>
-      <WelcomeComponent></WelcomeComponent>
-      <IntroductionComponent></IntroductionComponent>
-      <WhatWeCanDoComponent></WhatWeCanDoComponent>
-      <ServicesComponent></ServicesComponent>
-      <MapComponent></MapComponent>
-      <FooterComponent></FooterComponent>
-    </div>
+    <Switch>
+      <Route exact path="/register">
+        <Registration />
+      </Route>
+
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
   );
 }
 

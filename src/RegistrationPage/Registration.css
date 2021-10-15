@@ -1,3 +1,62 @@
+.register-container {
+    margin-left: 0;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./background.jpg');
+    background-size: 100% 100%;
+    position: absolute;
+}
+
 .register-main {
-    padding-top: 70px;
+    padding-top: 10%;
+}
+
+.register-div {
+    max-width: 40%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border: outset 4px;
+    border-radius: 2%;
+    background-color: white;
+}
+
+.register-group {
+    margin: 5px;
+}
+
+.register-label {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
+
+.register-button {
+    margin-top: 10px;
+    margin-left: 2%;
+}
+
+.register-message-error {
+    color: red !important;
+    --bs-text-opacity: 1;
+}
+
+.register-succ-main {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    padding-top: 10%;
+    padding-bottom: 40%;
+    padding-left: 10%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./the-humble-cropped.jpg');
+    background-size: 100% 100%;
+}
+
+.register-succ-button {
+    padding: 1%;
+    font-size: larger;
 }

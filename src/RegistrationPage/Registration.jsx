@@ -6,10 +6,12 @@ import * as Yup from "yup";
 import './Registration.css';
 
 import NavigationComponent from "../NavigationComponent/NavigationComponent";
+import RegistrationSucc from "./RegistrationSucc";
 
 export default function Registration() {
     const [completed, setCompleted] = useState(false);
     const [error, setError] = useState(null);
+    const [name, setName] = useState("");
 
     //const [passwordCh, setPasCh] = useState("");
 
@@ -54,6 +56,7 @@ export default function Registration() {
                 console.log(res.status);
                 if (res.status === 201) {
                     setCompleted(true);
+                    setName(values.first_name);
                 } else {
                     throw new Error("form not valid");
                 } 
@@ -65,7 +68,7 @@ export default function Registration() {
         },
       });
       if (completed) {
-        return <h1>Success!</h1>;
+        return <RegistrationSucc name={name}/>;
       }
     
       if (error) {
@@ -73,15 +76,15 @@ export default function Registration() {
       }
 
     return (
-        <Container>
+        <div  className="register-container">
             <header>
                 <NavigationComponent />
             </header>
             <main className="register-main">
-                <Container fluid className="signup-form">
+                <Container fluid className="signup-form register-div">
                     <Form onSubmit={formik.handleSubmit}>
-                        <Form.Group>
-                            <Form.Label>First Name</Form.Label>
+                        <Form.Group className="register-group">
+                            <Form.Label className="register-label">First Name</Form.Label>
                             <Form.Control
                                 id="first_name"
                                 name="first_name"
@@ -91,49 +94,49 @@ export default function Registration() {
                                 onChange={formik.handleChange}
                             />
                             {formik.touched.first_name && formik.errors.first_name ? (
-                                <Form.Text className="text-muted">{formik.errors.first_name}</Form.Text>
+                                <Form.Text className="register-message-error">{formik.errors.first_name}</Form.Text>
                             ) : null}
                         </Form.Group>
 
-                        <Form.Group>
-                            <Form.Label>Last Name</Form.Label>
+                        <Form.Group className="register-group">
+                            <Form.Label className="register-label">Last Name</Form.Label>
                             <Form.Control
                                 id="last_name"
                                 name="last_name"
                                 type="text"
-                                placeholder="Enter your last name"
+                                placeholder=""
                                 value={formik.values.last_name}
                                 onChange={formik.handleChange}
                             />
                             {formik.touched.last_name && formik.errors.last_name ? (
-                                <Form.Text className="text-muted">{formik.errors.last_name}</Form.Text>
+                                <Form.Text className="register-message-error">{formik.errors.last_name}</Form.Text>
                             ) : null}
                         </Form.Group>
 
-                        <Form.Group>
-                            <Form.Label>Email</Form.Label>
+                        <Form.Group className="register-group">
+                            <Form.Label className="register-label">Email</Form.Label>
                             <Form.Control
                                 id="email_address"
                                 name="email_address"
                                 type="email"
-                                placeholder="Enter your email address (abc@abc.com)"
+                                placeholder="(abc@abc.com)"
                                 value={formik.values.email_address}
                                 onChange={formik.handleChange}
                             />
                             {formik.touched.email_address && formik.errors.email_address ? (
-                                <Form.Text className="text-muted">{formik.errors.email_address}</Form.Text>
+                                <Form.Text className="register-message-error">{formik.errors.email_address}</Form.Text>
                             ) : null}
                         </Form.Group>
 
-                        <Form.Group>
-                            <Form.Label>Password</Form.Label>
+                        <Form.Group className="register-group">
+                            <Form.Label className="register-label">Password</Form.Label>
                             <Row>
                                 <Col>     
                                     <Form.Control
                                 id="password"
                                 name="password"
                                 type="password"
-                                placeholder=""
+                                placeholder="At least 8 characters"
                                 value={formik.values.password}
                                 onChange={formik.handleChange}
                                     />
@@ -151,34 +154,34 @@ export default function Registration() {
                                 </Col>
                             </Row> 
                             {formik.touched.password && formik.errors.password ? (
-                                <Form.Text className="text-muted">{formik.errors.password}</Form.Text>
+                                <Form.Text className="register-message-error">{formik.errors.password}  </Form.Text>
                             ) : null}
                             {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
-                                <Form.Text className="text-muted">{formik.errors.passwordConfirm}</Form.Text>
+                                <Form.Text className="register-message-error">{formik.errors.passwordConfirm}</Form.Text>
                             ) : null}
                         </Form.Group>
 
-                        <Form.Group>
-                            <Form.Label>Phone Number</Form.Label>
+                        <Form.Group className="register-group">
+                            <Form.Label className="register-label">Phone Number</Form.Label>
                             <Form.Control
                                 id="cell_phone"
                                 name="cell_phone"
                                 type="tel"
-                                placeholder="Enter your phone number"
+                                placeholder=""
                                 value={formik.values.cell_phone}
                                 onChange={formik.handleChange}
                             />
                             {formik.touched.cell_phone && formik.errors.cell_phone ? (
-                                <Form.Text className="text-muted">{formik.errors.cell_phone}</Form.Text>
+                                <Form.Text className="register-message-error">{formik.errors.cell_phone}</Form.Text>
                             ) : null}
                         </Form.Group>
 
-                        <Button variant="primary" type="submit">
-                        Submit
+                        <Button className="register-button" variant="primary" type="submit">
+                        Sign Up
                         </Button>
                     </Form>
                 </Container>
             </main>
-        </Container>
+        </div>
     );
 }

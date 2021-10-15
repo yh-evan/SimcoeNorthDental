@@ -29,7 +29,7 @@ Create a flexible, educational system that is easy to maintain, and programmers 
 ## 20% 
 ### ALL Restful API, Interactive homepage enhancement (in progress)
 ## 40% 
-### Customer dashboard 
+### Managerment dashboard 
 	a.personal information query
 	b.personal information update
 	

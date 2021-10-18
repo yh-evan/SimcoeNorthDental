@@ -52,6 +52,13 @@
   font-size: .8vw;
 }
 
+.welcome-right-button-book:hover {
+  transition: .6s;
+  background-color: #bee3db;
+  color: #00838f;
+  border: solid 1px #00838f;
+}
+
 .welcome-right-button-call {
   border-radius: 50px;
   background-color: #bee3db;

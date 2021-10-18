@@ -1,4 +1,6 @@
 .servicesComponent {
+  display: flex;
+  flex-wrap: wrap;
   height: fit-content;
 }
 

@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, NavDropdown } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 
-const NavigationComponent = () => {
+const NavigationComponent = ({ handleLoginClick }) => {
   const [show, setShow] = useState(true);
   const controlNavBar = () => {
     if (window.scrollY > 200) {
@@ -11,6 +11,9 @@ const NavigationComponent = () => {
     } else {
       setShow(true);
     }
+  };
+  const handlerClick = () => {
+    handleLoginClick();
   };
 
   useEffect(() => {
@@ -25,13 +28,15 @@ const NavigationComponent = () => {
       className={`navigation ${show && "navigation_show"}`}
       // data-aos="fade-down"
     >
-      <div className="navigation-left">
-        <img
-          className="navigation-left-img"
-          src="/img/Logo_with_name.png"
-          alt="logo"
-        ></img>
-      </div>
+      <a href="/home" className="navigation-left">
+        <div>
+          <img
+            className="navigation-left-img"
+            src="/img/Logo_with_name.png"
+            alt="logo"
+          ></img>
+        </div>
+      </a>
       <div className="navigation-right">
         <Nav className="me-auto">
           <NavDropdown
@@ -51,10 +56,15 @@ const NavigationComponent = () => {
             <NavDropdown.Item>Teeth whitening</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link className="navigation-right-about">About</Nav.Link>
-          <Nav.Link className="navigation-right-newPatient">
+          <Nav.Link className="navigation-right-newPatient" href="/register">
             New Patient
           </Nav.Link>
-          <button className="navigation-right-login">Login</button>
+          <button
+            className="navigation-right-login loginicon"
+            onClick={handleLoginClick}
+          >
+            Login
+          </button>
         </Nav>
       </div>
     </Nav>

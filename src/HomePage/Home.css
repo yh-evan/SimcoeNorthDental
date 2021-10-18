@@ -1,0 +1,69 @@
+.showLogin {
+  padding: 20px;
+  display: block;
+  transition: 800ms;
+  opacity: 1;
+  background-color: #89b0aeeb;
+  border-radius: 20px;
+  box-shadow: inset 0 0 2000px #b3e6e3eb, 0px 10px 13px -7px rgba(0, 0, 0, 0.6), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  /* box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0); */
+
+  position: fixed;
+  width: 500px;
+  height: 600px;
+  z-index: 200;
+  margin: 5% auto;
+  left: 0;
+  right: 0;
+
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-row {
+  margin: 20px;
+}
+
+.form-box label {
+  font-weight: bolder;
+  color: white;
+  width: 100px;
+  text-align: left;
+}
+
+.showLogin img {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.login-box {
+  border-radius: 20px;
+  border: none;
+  width: 60%;
+  text-decoration: none;
+}
+
+.login-btn {
+  margin-top: 80px;
+  border-radius: 50px;
+  border: 1px solid #bee3db;
+  height: 2vw;
+  width: 8vw;
+  background: #89b0ae;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: .8vw;
+}
+
+
+
+.showLogin.active {
+  transform: translateY(100px) scale(0) rotateY(180deg);
+  opacity: 0;
+}

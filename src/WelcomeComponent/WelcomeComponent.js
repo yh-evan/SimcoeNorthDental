@@ -10,7 +10,7 @@ function WelcomeComponent() {
           loop
           autoPlay
           muted
-          type="video/mov"
+          type="video/mp4"
         ></video>
         <div className="welcome-left-video-mask"></div>
       </div>

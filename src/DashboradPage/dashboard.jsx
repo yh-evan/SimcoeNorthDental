@@ -46,10 +46,17 @@ export default function Dashboard() {
         last_name: last_name,
         email_address: email_address,
         cell_phone: cell_phone,
-        address: address,
+        address: address || null,
         customer_id: customer_id || null,
         doctor_id: doctor_id || null,
-        auth_type: auth_type
+        auth_type: auth_type || null
+    };
+    const passData = {
+        first_name: first_name,
+        last_name: last_name,
+        email_address: email_address,
+        cell_phone: cell_phone,
+        address: address || null
     };
     //console.log(data);
 
@@ -66,8 +73,11 @@ export default function Dashboard() {
                     <div className="dashboard-contain">
                         <div className="dashboard-info">
                             <UserInfoComponent data={data} />
+                            <Link to={{ pathname: `/dashboard/${id}/update`, state: {user: passData} }}>Update Info</Link>
                         </div>
-                        
+                        <div className="dashboard-appointment">
+                            <p>Hello</p>
+                        </div>
                     </div>
                 </Container>
             </main>

@@ -19,7 +19,7 @@ export default function Home() {
 
     return (
         <div className="App">
-          <NavigationComponent handleLoginClick={handleLoginClick}></NavigationComponent>
+          <NavigationComponent handleLoginClick={handleLoginClick} turnOn = {true}></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
           <WelcomeComponent></WelcomeComponent>
           <IntroductionComponent></IntroductionComponent>

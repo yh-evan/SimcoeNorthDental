@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, NavDropdown } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 
-const NavigationComponent = ({ handleLoginClick }) => {
+const NavigationComponent = ({ handleLoginClick, turnOn }) => {
   const [show, setShow] = useState(true);
   const controlNavBar = () => {
     if (window.scrollY > 200) {
@@ -25,8 +25,9 @@ const NavigationComponent = ({ handleLoginClick }) => {
 
   return (
     <Nav
-      className={`navigation ${show && "navigation_show"}`}
-      // data-aos="fade-down"
+      className={`navigation ${show && turnOn && "navigation_hide"} ${
+        !turnOn && "navigation_freeze"
+      }`}
     >
       <a href="/home" className="navigation-left">
         <div>

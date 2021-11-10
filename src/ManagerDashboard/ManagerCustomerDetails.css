@@ -1,0 +1,12 @@
+.manager-customer-container {
+  display: flex;
+  justify-content: center;
+  padding: 20vh;
+}
+
+.manager-customer-form {
+  width: 680px;
+  border-radius: 30px;
+  background-color: #bee3dba8;
+  padding: 50px;
+}

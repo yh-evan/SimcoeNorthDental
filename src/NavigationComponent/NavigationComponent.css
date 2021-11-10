@@ -15,9 +15,13 @@
   transition: .6s;
 }
 
-.navigation_show {
+.navigation_hide {
   background-color: #00838f00;
   box-shadow: none;
+}
+
+.navigation_freeze {
+  position: relative;
 }
 
 

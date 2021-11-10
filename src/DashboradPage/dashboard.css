@@ -1,0 +1,35 @@
+.dashboard-container {
+    margin-left: 0;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.dashboard-main {
+    position:absolute;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.dashboard-pic {
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.dashboard-contain {
+    display: flex;
+}
+
+.dashboard-info {
+    flex: 1;
+    border-right: 1px grey solid;
+}
+
+.dashboard-appointment{
+    flex: 1;
+}
+
+.dashboard-pic-word {
+    margin: 0;
+}

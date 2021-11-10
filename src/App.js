@@ -5,6 +5,8 @@ import { useEffect } from "react";
 
 import Registration from "./RegistrationPage/Registration";
 import Home from "./HomePage/Home";
+import Dashboard from "./DashboradPage/dashboard";
+import CustomerInfoUpdate from "./DashboradPage/CustomerInfoUpdatePage/CustomerInfoUpdate";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -34,6 +36,13 @@ function App() {
 
       <Route path="/manager">
         <ManagerDashboard />
+      </Route>
+      <Route path="/dashboard/:id/update">
+        <CustomerInfoUpdate />
+      </Route>
+
+      <Route path="/dashboard/:id">
+        <Dashboard />
       </Route>
 
       <Route path="/">

@@ -15,10 +15,11 @@ export default function CustomerInfoUpdate(){
     const location = useLocation();
     
     const user = location.state.user;
-    const { first_name, last_name, email_address, address, cell_phone } = user;
+    const { first_name, last_name, email_address, address, cell_phone, customer_id, doctor_id, auth_type } = user;
     console.log(user);
 
     const { id } = useParams();
+    console.log(`update-${id}`);
 
     const [completed, setCompleted] = useState(false);
     const [error, setError] = useState(null);
@@ -30,8 +31,10 @@ export default function CustomerInfoUpdate(){
             last_name: last_name,
             email_address: email_address,
             cell_phone: cell_phone,
-            password: "",
-            passwordConfirm: "",
+            address: address,
+            customer_id: customer_id,
+            doctor_id: doctor_id,
+            auth_type: auth_type,
         },
         validationSchema: Yup.object({
             first_name: Yup.string().required("First name is required"),
@@ -43,18 +46,13 @@ export default function CustomerInfoUpdate(){
                 .min(10, "Phone number must be at least 10 characters")
                 .max(11, "Phone number must be at most 11 characters, with area code")
                 .required("Phone number is required"),
-            password: Yup.string()
-                .min(8, "Password must be at least 8 characters")
-                .required("Password is required"),
-            passwordConfirm: Yup.string()
-                .required("Second input is required")
-                .oneOf([Yup.ref('password')], "Two input is not match"),
+            address: Yup.string().required("Address is required"),
         }),
         onSubmit: (values) => {
             console.log(values);
     
-            fetch("/api/customers", {
-                method: "POST",
+            fetch(`https://db-customer-snd.herokuapp.com/api/customers/${id}`, {
+                method: "PUT",
                 headers: {
                 "Content-Type": "application/json",
                 },
@@ -62,7 +60,7 @@ export default function CustomerInfoUpdate(){
             })
             .then((res) => {
                 console.log(res.status);
-                if (res.status === 201) {
+                if (res.status === 200) {
                     setCompleted(true);
                     setName(values.first_name);
                 } else {
@@ -76,7 +74,9 @@ export default function CustomerInfoUpdate(){
         },
       });
       if (completed) {
-       
+        return (
+            <p>Success</p>
+        );
       }
     
       if (error) {
@@ -129,45 +129,12 @@ export default function CustomerInfoUpdate(){
                                 id="email_address"
                                 name="email_address"
                                 type="email"
-                                placeholder="(abc@abc.com)"
+                                placeholder=""
                                 value={formik.values.email_address}
                                 onChange={formik.handleChange}
                             />
                             {formik.touched.email_address && formik.errors.email_address ? (
                                 <Form.Text className="register-message-error">{formik.errors.email_address}</Form.Text>
-                            ) : null}
-                        </Form.Group>
-
-                        <Form.Group className="register-group">
-                            <Form.Label className="register-label">Password</Form.Label>
-                            <Row>
-                                <Col>     
-                                    <Form.Control
-                                id="password"
-                                name="password"
-                                type="password"
-                                placeholder="At least 8 characters"
-                                value={formik.values.password}
-                                onChange={formik.handleChange}
-                                    />
-                                </Col>
-                                <Col>
-                                   
-                            <Form.Control
-                                id="passwordConfirm"
-                                name="passwordConfirm"
-                                type="password"
-                                placeholder="Enter password again"
-                                value={formik.values.passwordConfirm}
-                                onChange={formik.handleChange}
-                            />
-                                </Col>
-                            </Row> 
-                            {formik.touched.password && formik.errors.password ? (
-                                <Form.Text className="register-message-error">{formik.errors.password}  </Form.Text>
-                            ) : null}
-                            {formik.touched.passwordConfirm && formik.errors.passwordConfirm ? (
-                                <Form.Text className="register-message-error">{formik.errors.passwordConfirm}</Form.Text>
                             ) : null}
                         </Form.Group>
 
@@ -186,8 +153,23 @@ export default function CustomerInfoUpdate(){
                             ) : null}
                         </Form.Group>
 
+                        <Form.Group className="register-group">
+                            <Form.Label className="register-label">Address</Form.Label>
+                            <Form.Control
+                                id="address"
+                                name="address"
+                                type="text"
+                                placeholder=""
+                                value={formik.values.address}
+                                onChange={formik.handleChange}
+                            />
+                            {formik.touched.address && formik.errors.address ? (
+                                <Form.Text className="register-message-error">{formik.errors.address}</Form.Text>
+                            ) : null}
+                        </Form.Group>
+
                         <Button className="register-button" variant="primary" type="submit">
-                        Sign Up
+                        Update
                         </Button>
                     </Form>
                 </Container>

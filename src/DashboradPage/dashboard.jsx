@@ -8,11 +8,12 @@ import './dashboard.css';
 
 import NavigationComponent from "../NavigationComponent/NavigationComponent";
 import UserInfoComponent from "./UserInfoComponent/UserInfoComponent";
+import UserAppointmentListComponent from "./UserAppointmentListComponent/UserAppointmentListComponent";
 
 export default function Dashboard() {
     const { id } = useParams();
-    //console.log(id);
-    const { data: user, error } = useSWR(`/api/customers/${id}`);
+    console.log(`user-${id}`);
+    const { data: user, error } = useSWR(`https://db-customer-snd.herokuapp.com/api/customers/${id}`);
     //console.log(user);
     if(error)
         return <h1>Error...</h1>;
@@ -51,13 +52,6 @@ export default function Dashboard() {
         doctor_id: doctor_id || null,
         auth_type: auth_type || null
     };
-    const passData = {
-        first_name: first_name,
-        last_name: last_name,
-        email_address: email_address,
-        cell_phone: cell_phone,
-        address: address || null
-    };
     //console.log(data);
 
     return (
@@ -73,10 +67,9 @@ export default function Dashboard() {
                     <div className="dashboard-contain">
                         <div className="dashboard-info">
                             <UserInfoComponent data={data} />
-                            <Link to={{ pathname: `/dashboard/${id}/update`, state: {user: passData} }}>Update Info</Link>
+                            <Link to={{ pathname: `/dashboard/${id}/update`, state: {user: data} }}>Update Info</Link>
                         </div>
                         <div className="dashboard-appointment">
-                            <p>Hello</p>
                         </div>
                     </div>
                 </Container>

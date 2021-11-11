@@ -70,6 +70,9 @@ export default function Dashboard() {
                             <Link to={{ pathname: `/dashboard/${id}/update`, state: {user: data} }}>Update Info</Link>
                         </div>
                         <div className="dashboard-appointment">
+                            <h3>My Appointments</h3>
+                            <p>|</p>
+                            <UserAppointmentListComponent customer_id={customer_id} />
                         </div>
                     </div>
                 </Container>

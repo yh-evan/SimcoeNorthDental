@@ -45,7 +45,7 @@ export default function Registration() {
         onSubmit: (values) => {
             console.log(values);
     
-            fetch("/api/customers", {
+            fetch("https://db-customer-snd.herokuapp.com/api/customers", {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json",

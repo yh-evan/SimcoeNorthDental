@@ -15,7 +15,7 @@ function ManagerDashboard() {
   let history = useHistory();
 
   useEffect(() => {
-    const url = "http://localhost:8080/customers";
+    const url = "https://frozen-meadow-88258.herokuapp.com/api/customers/";
 
     setLoading(true);
 

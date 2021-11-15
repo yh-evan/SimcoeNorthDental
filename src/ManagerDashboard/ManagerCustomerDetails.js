@@ -9,7 +9,7 @@ export default function ManagerCustomerDetails({ id }) {
   const [loading, setLoading] = useState(null);
 
   useEffect(() => {
-    const url = `http://localhost:8080/api/customers/${id}`;
+    const url = `https://frozen-meadow-88258.herokuapp.com/api/customers/${id}`;
 
     setLoading(true);
 

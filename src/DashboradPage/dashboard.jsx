@@ -60,7 +60,6 @@ export default function Dashboard() {
             <main className="dashboard-main">
                 <Container>
                     <div className="dashboard-pic">
-                        <img src='./testPage.jpg' alt="cusrtomer's pic"></img>
                         <h2 className="dashboard-pic-word">Hello, {first_name} {last_name}</h2>
                         <h4 className="dashboard-pic-word">{customer_id}</h4>
                     </div>

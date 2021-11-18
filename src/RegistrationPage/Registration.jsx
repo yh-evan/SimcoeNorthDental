@@ -24,6 +24,7 @@ export default function Registration() {
             cell_phone: "",
             password: "",
             passwordConfirm: "",
+            role: "customer",
         },
         validationSchema: Yup.object({
             first_name: Yup.string().required("First name is required"),

@@ -21,10 +21,12 @@ export default function UserAppointmentListComponent({ customer_id }) {
        <div>
            <Table striped>
                <thead>
-                   <th>Doctor</th>
-                   <th>Date</th>
-                   <th>Type</th>
-                   <th>Description</th>
+                    <tr>
+                        <th>Doctor</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
                </thead>
                <tbody>
                    {

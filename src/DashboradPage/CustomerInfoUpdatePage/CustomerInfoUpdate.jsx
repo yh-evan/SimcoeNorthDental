@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import useSWR from "swr";
 import { Form, Container, Button, Row, Col } from "react-bootstrap";
 import { useFormik } from "formik";
@@ -74,9 +75,7 @@ export default function CustomerInfoUpdate(){
         },
       });
       if (completed) {
-        return (
-            <p>Success</p>
-        );
+        return <Redirect to={`/${id}`} />
       }
     
       if (error) {

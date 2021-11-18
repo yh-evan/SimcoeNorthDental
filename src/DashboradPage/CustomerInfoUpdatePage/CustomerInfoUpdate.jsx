@@ -75,7 +75,7 @@ export default function CustomerInfoUpdate(){
         },
       });
       if (completed) {
-        return <Redirect to={`/${id}`} />
+        return <Redirect to={`/dashboard/${id}`} />
       }
     
       if (error) {

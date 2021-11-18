@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, useHistory } from "react-router-dom";
 import useSWR from "swr";
 import { Form, Container, Button, Row, Col } from "react-bootstrap";
 import { useFormik } from "formik";
@@ -13,6 +13,7 @@ import NavigationComponent from "../../NavigationComponent/NavigationComponent";
 export default function CustomerInfoUpdate(){
 
     const location = useLocation();
+    const history = useHistory();
     
     const user = location.state.user;
     const { first_name, last_name, email_address, address, cell_phone, customer_id, doctor_id, auth_type } = user;
@@ -74,9 +75,7 @@ export default function CustomerInfoUpdate(){
         },
       });
       if (completed) {
-        return (
-            <p>Success</p>
-        );
+        history.push(`/dashboard/${id}`);
       }
     
       if (error) {
@@ -87,9 +86,7 @@ export default function CustomerInfoUpdate(){
 
     return (
         <div  className="register-container">
-            <header>
-                <NavigationComponent />
-            </header>
+            
             <main className="register-main">
                 <Container fluid className="signup-form register-div">
                     <Form onSubmit={formik.handleSubmit}>

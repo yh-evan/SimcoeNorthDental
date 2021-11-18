@@ -1,7 +1,24 @@
+.introduction-container {
+  background-color: #bee3db;
+
+}
+
+
 .introduction {
+  position: relative;
+  bottom: -20px;
+  z-index: 1;
   display: flex;
   width: 100vw;
   height: 30vw;
+  /* background-color: #e5e5f7; */
+  background-color: #f1f5f5;
+  opacity: 1;
+  background-image: radial-gradient(#bee3db 2px, transparent 2px), radial-gradient(#bee3db 2px, #f1f5f5 2px);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
+  border-radius: 20px;
+  box-shadow: -2px 0px 18px -5px #000;
 
 }
 
@@ -38,8 +55,13 @@
 
 
 .introduction-img-1 {
-  transform: translateY(6vh);
-  width: 30vw;
+  transform: translateY(7vh);
+  max-width: 27vw;
+  border: solid 10px #f1f5f5;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px #e3e6e6,
+    -5px -5px 10px #ffffff;
 }
 
 .introduction-content button {
@@ -53,4 +75,20 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   font-size: .8vw;
+}
+
+.meetDrHu {
+  border-radius: 50px;
+  color: #00838f !important;
+  box-shadow: 5px 5px 10px #e3e6e6,
+    -5px -5px 10px #ffffff;
+  background: #F1F5F5 !important;
+
+}
+
+.meetDrHu:hover {
+  transition: .6s;
+  background: #F1F5F5;
+  box-shadow: inset 5px 5px 10px #e3e6e6,
+    inset -5px -5px 10px #ffffff;
 }

@@ -5,19 +5,19 @@
 
 .MapComponent-container {
   display: flex;
-  margin-left: 20vw;
-  margin-top: 5vw;
-  margin-bottom: 5vw;
-
+  justify-content: center;
+  padding: 50px;
 }
 
 .MapComponent-map {
   display: flex;
   height: 25vw;
   width: 30vw;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-
+  margin-left: -60px;
+  border-radius: 40px;
+  border: 20px solid #bee3db;
+  box-shadow: 5px 5px 10px #b3d5ce,
+    -5px -5px 10px #c9f1e8;
 
 }
 
@@ -35,10 +35,16 @@
   background-color: #fff;
   width: auto;
   height: auto;
-  left: 40vw;
+  left: 58vw;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  margin: 5vw;
+  margin: 4vw;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: #89b0ae;
 }
 
 .text-contact-logo {
@@ -67,6 +73,10 @@
   padding: 10px 30px;
   color: #00838f;
   font-weight: normal;
+  border-radius: 20px;
+  border: 12px solid #89b0ae;
+  box-shadow: 5px 5px 10px #739492,
+    -5px -5px 10px #9fccca;
 }
 
 .MapComponent-info-title {

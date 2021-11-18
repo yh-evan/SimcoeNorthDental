@@ -5,7 +5,10 @@ import { Background, Parallax } from "react-parallax";
 class IntroductionComponent extends Component {
   render() {
     return (
-      <div className="introduction">
+      <div
+        className="introduction pattern-cross-dots-sm
+      "
+      >
         <div className="introduction-content">
           <h1 data-aos="fade-down">PROFESSIONAL</h1>
           <div className="hl"></div>
@@ -17,14 +20,16 @@ class IntroductionComponent extends Component {
             for more than 10 years after graduated with a Master degree of
             clinical medicine in Dentistry from Peking University.{" "}
           </p>
-          <button data-aos="fade-up">Meet Dr.Hu</button>
+          <button className="meetDrHu" data-aos="fade-up">
+            Meet Dr.Hu
+          </button>
         </div>
         <div className="introduction-right">
           <Parallax strength={-100} className="introduction-right-parallax">
             <Background>
               <img
                 className="introduction-img-1"
-                src="/img/ClinicMembersPhotos/Dr_Hu.png"
+                src="/img/ClinicMembersPhotos/Dr_Hu_auto_x2.jpg"
                 alt="Dr.Hu"
               ></img>
             </Background>

@@ -1,7 +1,7 @@
 import { Switch, Route } from "react-router";
 import "./App.css";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Registration from "./RegistrationPage/Registration";
 import Home from "./HomePage/Home";
@@ -11,44 +11,156 @@ import CustomerInfoUpdate from "./DashboradPage/CustomerInfoUpdatePage/CustomerI
 import "aos/dist/aos.css";
 import AOS from "aos";
 import ManagerDashboard from "./ManagerDashboard/ManagerDashboard";
-import ManagerCustomerDetails from "./ManagerDashboard/ManagerCustomerDetails";
+import AboutComponent from "./AboutComponent/About";
+import ServicespageComponent from "./servicepage/ServicepageComponent";
+
+import NavigationComponent from "./NavigationComponent/NavigationComponent";
+import FooterComponent from "./FooterComponent/FooterComponent";
+import LoginComponent from "./LoginComponent/LoginComponent";
+
+import Axios from "axios";
 
 function App() {
+  const [isShowLogin, setIsShowLogin] = useState(false);
+  const [userID, setUserID] = useState("");
+  const [userName, setUserName] = useState(null);
+  const [role, setRole] = useState(null);
+
+  const handleLoginClick = () => {
+    setIsShowLogin((isShowLogin) => !isShowLogin);
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 2000,
     });
     AOS.refresh();
+    Axios.get("http://localhost:3001/login", {
+      headers: { "x-access-token": localStorage.getItem("token") },
+    }).then((response) => {
+      if (response.data.loggedIn === true) {
+        setUserID(response.data.user._id);
+        setUserName(response.data.user.first_name);
+        setRole(response.data.user.role);
+      } else {
+        console.log(`hello`);
+      }
+    });
   }, []);
+
   return (
-    <Switch>
-      <Route exact path="/register">
-        <Registration />
-      </Route>
+    <div className="App">
+      <Switch>
+        <Route path="/services">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <ServicespageComponent />
+        </Route>
 
-      <Route
-        exact
-        path="/manager/customer/:id"
-        render={(props) => (
-          <ManagerCustomerDetails id={props.match.params.id} />
-        )}
-      />
+        <Route path="/about">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <AboutComponent />
+        </Route>
 
-      <Route path="/manager">
-        <ManagerDashboard />
-      </Route>
-      <Route path="/dashboard/:id/update">
-        <CustomerInfoUpdate />
-      </Route>
+        <Route exact path="/register">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <Registration />
+        </Route>
 
-      <Route path="/dashboard/:id">
-        <Dashboard />
-      </Route>
+        <Route path="/manager/customer/:id/update">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <CustomerInfoUpdate />
+        </Route>
 
-      <Route path="/">
-        <Home />
-      </Route>
-    </Switch>
+        <Route exact path="/manager/customer/:id">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <Dashboard />
+        </Route>
+
+        <Route path="/manager">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <ManagerDashboard />
+        </Route>
+        <Route path="/dashboard/:id/update">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <CustomerInfoUpdate />
+        </Route>
+
+        <Route path="/dashboard/:id">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <Dashboard />
+        </Route>
+
+        <Route path="/">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={true}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <Home />
+        </Route>
+      </Switch>
+
+      <FooterComponent />
+    </div>
   );
 }
 

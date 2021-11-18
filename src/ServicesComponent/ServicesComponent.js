@@ -4,9 +4,8 @@ import { Card, CardGroup } from "react-bootstrap";
 function ServicesComponent() {
   return (
     <div className="servicesComponent">
-      {/* <h1 data-aos="fade-down">Our services</h1>
-      <div class="vl"></div> */}
-      <CardGroup className="cards-up">
+      {/* <CardGroup className="cards-group"> */}
+      <div className="cards-group">
         <Card>
           <div className="card-mask">
             <p>Bridges and Dentures</p>
@@ -42,7 +41,7 @@ function ServicesComponent() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        {/* <Card>
           <div className="card-mask">
             <p>Dental emergencies</p>
           </div>
@@ -58,7 +57,7 @@ function ServicesComponent() {
               wish to see a dentist ASAP, call us at
             </Card.Text>
           </Card.Body>
-        </Card>
+        </Card> */}
         <Card>
           <div className="card-mask">
             <p>Dental Implants</p>
@@ -97,9 +96,7 @@ function ServicesComponent() {
             </Card.Text>
           </Card.Body>
         </Card>
-      </CardGroup>
 
-      <CardGroup>
         <Card>
           <div className="card-mask">
             <p>Fillings</p>
@@ -190,7 +187,8 @@ function ServicesComponent() {
             </Card.Text>
           </Card.Body>
         </Card>
-      </CardGroup>
+      </div>
+      {/* </CardGroup> */}
     </div>
   );
 }

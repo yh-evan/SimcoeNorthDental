@@ -1,11 +1,13 @@
 .showLogin {
-  padding: 20px;
+  padding: 40px;
   display: block;
   transition: 800ms;
   opacity: 1;
-  background-color: #89b0aeeb;
+  background-color: #bee3db;
   border-radius: 20px;
-  box-shadow: inset 0 0 2000px #b3e6e3eb, 0px 10px 13px -7px rgba(0, 0, 0, 0.6), 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 10px #b1d3cc,
+    -5px -5px 10px #cbf3ea;
+  /* box-shadow: inset 0 0 2000px #b3e6e3eb, 0px 10px 13px -7px rgba(0, 0, 0, 0.6), 5px 5px 15px 5px rgba(0, 0, 0, 0); */
   /* box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0); */
 
   position: fixed;
@@ -18,47 +20,11 @@
 
 }
 
-.form-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
 
-.login-row {
-  margin: 20px;
-}
-
-.form-box label {
-  font-weight: bolder;
-  color: white;
-  width: 100px;
-  text-align: left;
-}
 
 .showLogin img {
   width: 100%;
   margin-bottom: 80px;
-}
-
-.login-box {
-  border-radius: 20px;
-  border: none;
-  width: 60%;
-  text-decoration: none;
-}
-
-.login-btn {
-  margin-top: 80px;
-  border-radius: 50px;
-  border: 1px solid #bee3db;
-  height: 2vw;
-  width: 8vw;
-  background: #89b0ae;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  font-size: .8vw;
 }
 
 

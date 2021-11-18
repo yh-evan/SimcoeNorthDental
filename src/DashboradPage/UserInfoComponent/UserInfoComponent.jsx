@@ -16,7 +16,7 @@ export default function UserInfoComponent({ data }) {
                         <div className="user-info-div">Email Address</div>
                         <div className="user-info-divInfo">{email_address}</div>
                     </li>
-                    <li className="user-infor-lii2">
+                    {/* <li className="user-infor-lii2">
                         <div className="user-info-div">ID</div>
                         <div className="user-info-divInfo">
                             {auth_type === "customer"? (
@@ -25,7 +25,7 @@ export default function UserInfoComponent({ data }) {
                                 <p>{doctor_id}</p>
                             )}
                         </div>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div>

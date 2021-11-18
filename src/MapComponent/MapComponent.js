@@ -6,6 +6,7 @@ import {
   Marker,
 } from "react-google-maps";
 import "./MapComponent.css";
+
 class MapComponent extends React.Component {
   render() {
     const MapWithAMarker = withScriptjs(

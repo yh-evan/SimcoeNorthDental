@@ -1,14 +1,32 @@
 .servicesComponent {
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
   height: fit-content;
+  top: -20px;
+  background-color: #f1f5f5;
+  opacity: 1;
+  background-image: radial-gradient(#bee3db 2px, transparent 2px), radial-gradient(#bee3db 2px, #f1f5f5 2px);
+  background-size: 80px 80px;
+  background-position: 0 20, 40px 40px;
+  border-radius: 20px;
+  box-shadow: -2px 0px 18px -5px #000000;
 }
 
+.cards-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .servicesComponent .card {
   overflow: hidden;
-  cursor: pointer;
-  color: #bee3db;
+  cursor: default;
+  color: #fff;
+  max-width: 30vw;
+  margin: 20px;
+  border-radius: 40px;
+  border: 10px solid #f1f5f5;
+  box-shadow: 5px 5px 10px #e3e6e6,
+    -5px -5px 10px #ffffff;
 }
 
 .servicesComponent .card-body {
@@ -21,12 +39,12 @@
   height: 100%;
 }
 
+
 .servicesComponent .card:hover>.card-body {
   visibility: visible;
   transition: .6s;
-  background-color: #00838fe0;
+  background-color: rgba(158, 188, 182, .8);
   transform: scaleY(1);
-
 }
 
 .servicesComponent .card-mask {

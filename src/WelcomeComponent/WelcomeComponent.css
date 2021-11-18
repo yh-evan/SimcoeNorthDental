@@ -1,16 +1,26 @@
 .welcome {
   display: flex;
   height: 100%;
+  background: #bee3db;
 }
 
 .welcome-left {
   display: flex;
   max-width: fit-content;
-  background: #f2e9e4;
+  height: fit-content;
+
 }
 
 .welcome-left-video {
-  max-width: 50vw;
+  max-width: 21vw;
+  height: fit-content;
+  margin-top: 12vh;
+  margin-bottom: 12vh;
+  margin-left: 6vw;
+  border: 20px solid #bee3db;
+  border-radius: 260px;
+  box-shadow: 5px 5px 10px #b3d5ce,
+    -5px -5px 10px #c9f1e8;
 }
 
 
@@ -44,23 +54,27 @@
 }
 
 .welcome-right-button-book {
-  margin-right: 2vw;
+  margin-right: .5vw;
   border-radius: 50px;
+  background: #bee3db;
+  box-shadow: 5px 5px 10px #b3d5ce,
+    -5px -5px 10px #c9f1e8;
   border: none;
-  height: 2vw;
-  width: 8vw;
-  background: #00838f;
-  color: white;
+  height: 3vw;
+  width: 10vw;
+  color: #00838f;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   font-size: .8vw;
+
+
+
 }
 
 .welcome-right-button-book:hover {
   transition: .6s;
-  background-color: #bee3db;
-  color: #00838f;
-  border: solid 1px #00838f;
+  box-shadow: inset 5px 5px 10px #b3d5ce,
+    inset -5px -5px 10px #c9f1e8;
 }
 
 .welcome-right-button-call {
@@ -68,10 +82,9 @@
   background-color: #bee3db;
   height: 2vw;
   width: 16vw;
-  border: solid 1px #00838f;
   color: #00838f;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   font-size: .8vw;
-
+  cursor: default !important;
 }

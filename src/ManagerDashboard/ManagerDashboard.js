@@ -37,33 +37,18 @@ function ManagerDashboard() {
       });
   }, []);
 
-  if (!results) {
-    return (
-      <div className="ManagerDashboard">
-        <NavigationComponent turnOn={false} />
-        <div className="manager-content">
-          <p>No customers' information found</p>
-        </div>
-        <FooterComponent />
-      </div>
-    );
-  }
-
   if (!results || loading) {
     return (
       <div className="ManagerDashboard">
-        <NavigationComponent turnOn={false} />
         <div className="manager-content">
           <p>Loading Customers' information...</p>
         </div>
-        <FooterComponent />
       </div>
     );
   }
 
   return (
     <div className="ManagerDashboard">
-      <NavigationComponent turnOn={false} />
       <div className="manager-content">
         <Container>
           <Card>
@@ -103,7 +88,6 @@ function ManagerDashboard() {
           </Card>
         </Container>
       </div>
-      <FooterComponent />
     </div>
   );
 }

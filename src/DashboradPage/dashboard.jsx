@@ -1,41 +1,35 @@
 import { useParams, Link } from "react-router-dom";
 //import { useEffect, useState } from "react";
 import useSWR from "swr";
-
+import Axios from "axios";
+import { useState } from "react";
+import { Redirect } from "react-router";
 import { Container } from "react-bootstrap";
-
 import './dashboard.css';
-
-import NavigationComponent from "../NavigationComponent/NavigationComponent";
 import UserInfoComponent from "./UserInfoComponent/UserInfoComponent";
 import UserAppointmentListComponent from "./UserAppointmentListComponent/UserAppointmentListComponent";
+
 
 export default function Dashboard() {
     const { id } = useParams();
     console.log(`user-${id}`);
     const { data: user, error } = useSWR(`https://db-customer-snd.herokuapp.com/api/customers/${id}`);
+    const [redirect, setRedirect] = useState(false);
+ 
     //console.log(user);
+
+    const logout = () => {
+        
+        Axios.get("http://localhost:3001/logout", {}).then((response) => {
+            localStorage.clear();    
+          }
+        ).then(setRedirect(true));
+      };
+
+
+
     if(error)
         return <h1>Error...</h1>;
-/* Hard Coding
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        setLoading(true);
-        fetch(`/api/customers/${id}`)
-        .then(res => {
-            if(!res.ok)
-                throw new Error('unable to get user info from Github');
-
-            return res.json();
-        })
-        .then(result => setUser(result.customers))
-        .catch(err => console.error(err))
-        .finally(() => setLoading(false));
-    }, [id]);
-    console.log(user);
-*/
 
     if(!user){
         return <h1>LOADING...</h1>
@@ -54,29 +48,41 @@ export default function Dashboard() {
     };
     //console.log(data);
 
-    return (
-        <div className="dashboard-container">
-            <NavigationComponent />
-            <main className="dashboard-main">
-                <Container>
-                    <div className="dashboard-pic">
-                        <img src='./testPage.jpg' alt="cusrtomer's pic"></img>
-                        <h2 className="dashboard-pic-word">Hello, {first_name} {last_name}</h2>
-                        <h4 className="dashboard-pic-word">{customer_id}</h4>
-                    </div>
-                    <div className="dashboard-contain">
-                        <div className="dashboard-info">
-                            <UserInfoComponent data={data} />
-                            <Link to={{ pathname: `/dashboard/${id}/update`, state: {user: data} }}>Update Info</Link>
+    if(redirect){
+        return (
+            <div className="goodbye">
+                <a className="goodbye-text" href="/">
+                    <h1>Goodbye {data.first_name}</h1>
+                    <p>See you next time, take care!</p>
+                </a>
+            </div>
+        );
+    } else {
+        return (
+            <div className="dashboard-container">
+                <main className="dashboard-main">
+                    <Container>
+                        <div className="dashboard-pic">
+                            <h2 className="dashboard-pic-word">Hello, {first_name} {last_name}</h2>
                         </div>
-                        <div className="dashboard-appointment">
-                            <h3>My Appointments</h3>
-                            <p>|</p>
-                            <UserAppointmentListComponent customer_id={customer_id} />
+                        <div className="dashboard-contain">
+                            <div className="dashboard-info">
+                                <UserInfoComponent data={data} />
+                                <Link to={{ pathname: `/dashboard/${id}/update`, state: {user: data} }}>Update Info</Link>
+                            </div>
+                            <div className="dashboard-appointment">
+                                <h3>My Appointments</h3>
+                                <p>|</p>
+                                <UserAppointmentListComponent customer_id={customer_id} />
+                            </div>
                         </div>
-                    </div>
-                </Container>
-            </main>
-        </div>
-    );
+                    </Container>
+                </main>
+
+                <div className="logoutBtn">
+                    <button  onClick={logout}>LOGOUT</button>
+                </div>
+            </div>
+        );
+    }
 }

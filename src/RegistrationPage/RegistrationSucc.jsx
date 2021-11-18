@@ -1,4 +1,3 @@
-import Button from "@restart/ui/esm/Button";
 import { Container, Toast } from "react-bootstrap";
 
 import './Registration.css'
@@ -7,9 +6,11 @@ export default function RegistrationSucc({ name }) {
     return (
         <div className="register-succ-main">
             <Container>
-                <Button className="mb-2 register-succ-button">
-                    Back to <strong>Home</strong> page
-                </Button>
+                <a href="/">
+                    <button className="mb-2 register-succ-button">
+                        Back to <strong>Home</strong> page
+                    </button>
+                </a>
                 <Toast>
                     <Toast.Header>
                         <img src="./logo.png" className="rounded me-2" alt="" />

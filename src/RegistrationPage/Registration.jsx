@@ -7,6 +7,7 @@ import './Registration.css';
 
 import NavigationComponent from "../NavigationComponent/NavigationComponent";
 import RegistrationSucc from "./RegistrationSucc";
+import FooterComponent from "../FooterComponent/FooterComponent"
 
 export default function Registration() {
     const [completed, setCompleted] = useState(false);
@@ -77,10 +78,7 @@ export default function Registration() {
 
     return (
         <div  className="register-container">
-            <header>
-                <NavigationComponent />
-            </header>
-            <main className="register-main">
+            <div className="register-main">
                 <Container fluid className="signup-form register-div">
                     <Form onSubmit={formik.handleSubmit}>
                         <Form.Group className="register-group">
@@ -175,13 +173,12 @@ export default function Registration() {
                                 <Form.Text className="register-message-error">{formik.errors.cell_phone}</Form.Text>
                             ) : null}
                         </Form.Group>
-
                         <Button className="register-button" variant="primary" type="submit">
                         Sign Up
                         </Button>
                     </Form>
                 </Container>
-            </main>
+            </div>
         </div>
     );
 }

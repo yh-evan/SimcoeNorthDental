@@ -19,7 +19,9 @@ function WelcomeComponent() {
           <h5>Family Dentist in Oshawa</h5>
           <h1>Meet your neighbors at Simcoe North Dental</h1>
           <div className="welcome-right-button">
-            <button className="welcome-right-button-book">BOOK NOW</button>
+            <a href="/register">
+              <button className="welcome-right-button-book">JOIN US NOW</button>
+            </a>
             <button className="welcome-right-button-call">
               OR CALL: (905) 417-4481
             </button>

@@ -1,5 +1,5 @@
 import "./ServicesComponent.css";
-import { Card, CardGroup } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 function ServicesComponent() {
   return (
@@ -41,23 +41,6 @@ function ServicesComponent() {
             </Card.Text>
           </Card.Body>
         </Card>
-        {/* <Card>
-          <div className="card-mask">
-            <p>Dental emergencies</p>
-          </div>
-
-          <Card.Img
-            variant="top"
-            src="/img/services photoes/dental emergency.jpg"
-          />
-          <Card.Body>
-            <Card.Title>Dental emergencies</Card.Title>
-            <Card.Text>
-              If you have any dental emergencies (pain, discomfort, etc.) and
-              wish to see a dentist ASAP, call us at
-            </Card.Text>
-          </Card.Body>
-        </Card> */}
         <Card>
           <div className="card-mask">
             <p>Dental Implants</p>

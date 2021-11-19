@@ -5,8 +5,10 @@ import { useState, useEffect } from "react";
 
 import Registration from "./RegistrationPage/Registration";
 import Home from "./HomePage/Home";
+import DoctorDashboard from "./DoctorDashboardPage/doctorDashboard";
 import Dashboard from "./DashboradPage/dashboard";
 import CustomerInfoUpdate from "./DashboradPage/CustomerInfoUpdatePage/CustomerInfoUpdate";
+import DoctorInfoUpdate from "./DoctorDashboardPage/DoctorInfoUpdatePage/DoctorInfoUpdate";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -123,6 +125,31 @@ function App() {
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
           <ManagerDashboard />
         </Route>
+
+        <Route path="/dashboard/doctor/:id/update">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <DoctorInfoUpdate />
+        </Route>
+
+        <Route path="/dashboard/doctor/:id">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          <DoctorDashboard />
+        </Route>
+
         <Route path="/dashboard/:id/update">
           <NavigationComponent
             handleLoginClick={handleLoginClick}

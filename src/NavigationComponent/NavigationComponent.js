@@ -22,9 +22,9 @@ const NavigationComponent = ({
       setShow(true);
     }
   };
-  const handlerClick = () => {
-    handleLoginClick();
-  };
+  // const handlerClick = () => {
+  //   handleLoginClick();
+  // };
 
   useEffect(() => {
     window.addEventListener("scroll", controlNavBar);
@@ -155,7 +155,7 @@ const NavigationComponent = ({
             <button
               className="navigation-right-login"
               onClick={() => {
-                history.push(`/manager`);
+                history.push(`/dashboard/doctor/${userID}`);
               }}
             >
               <span>Dr. {capitalize(userName)}</span>

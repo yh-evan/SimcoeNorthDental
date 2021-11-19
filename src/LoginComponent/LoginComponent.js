@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Axios from "axios";
 import "./LoginComponent.css";
+import "font-awesome/css/font-awesome.min.css";
 
 Axios.defaults.withCredentials = true;
 
@@ -40,6 +41,7 @@ const LoginForm = ({ isShowLogin }) => {
                 type="text"
                 name="username"
                 className="login-box"
+                placeholder="&#xf007;  Enter your email"
                 onChange={(e) => {
                   setUsername(e.target.value);
                 }}
@@ -51,6 +53,7 @@ const LoginForm = ({ isShowLogin }) => {
                 type="password"
                 name="password"
                 className="login-box"
+                placeholder="&#xf084;  Enter your password"
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}

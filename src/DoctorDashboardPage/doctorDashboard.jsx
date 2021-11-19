@@ -1,9 +1,7 @@
 import { useParams, Link } from "react-router-dom";
-//import { useEffect, useState } from "react";
 import useSWR from "swr";
 import Axios from "axios";
 import { useState } from "react";
-import { Redirect } from "react-router";
 import { Container } from "react-bootstrap";
 import '../DashboradPage/dashboard.css';
 
@@ -59,7 +57,7 @@ export default function DoctorDashboard() {
                 <main className="dashboard-main">
                     <Container>
                         <div className="dashboard-pic">
-                            <h2 className="dashboard-pic-word">Hello, {first_name} {last_name}</h2>
+                            <h2 className="dashboard-pic-word">Hello, Dr. {first_name} {last_name}</h2>
                         </div>
                         <div className="dashboard-contain">
                             <div className="dashboard-info">

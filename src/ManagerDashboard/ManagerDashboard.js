@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Card, Table, Container } from "react-bootstrap";
+import Axios from "axios";
 
 import React from "react";
 
@@ -9,8 +10,17 @@ import "./ManagerDashboard.css";
 function ManagerDashboard() {
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(null);
+  const [redirect, setRedirect] = useState(false);
 
   let history = useHistory();
+
+  const logout = () => {
+    Axios.get("http://localhost:3001/logout", {})
+      .then((response) => {
+        localStorage.clear();
+      })
+      .then(setRedirect(true));
+  };
 
   useEffect(() => {
     const url = "https://frozen-meadow-88258.herokuapp.com/api/customers/";
@@ -41,6 +51,17 @@ function ManagerDashboard() {
         <div className="manager-content">
           <p>Loading Customers' information...</p>
         </div>
+      </div>
+    );
+  }
+
+  if (redirect) {
+    return (
+      <div className="goodbye">
+        <a className="goodbye-text" href="/">
+          <h1>Goodbye Administrator</h1>
+          <p>See you next time, take care!</p>
+        </a>
       </div>
     );
   }
@@ -85,6 +106,9 @@ function ManagerDashboard() {
             </Card.Body>
           </Card>
         </Container>
+        <div className="logoutBtn">
+          <button onClick={logout}>LOGOUT</button>
+        </div>
       </div>
     </div>
   );

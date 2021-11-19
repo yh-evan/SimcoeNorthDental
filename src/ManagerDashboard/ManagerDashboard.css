@@ -4,17 +4,16 @@
 }
 
 .manager-content {
-  height: 100vh;
+  height: 80vh;
   margin-top: 60px;
 }
 
-.card {
+.manager-content .card {
   all: unset;
-  border: none;
-
 }
 
-.card-header {
+.manager-content .card-header {
   font-size: 20px;
   text-align: center;
+  border-radius: 20px !important;
 }

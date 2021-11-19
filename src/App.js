@@ -17,7 +17,8 @@ import ServicespageComponent from "./servicepage/ServicepageComponent";
 import NavigationComponent from "./NavigationComponent/NavigationComponent";
 import FooterComponent from "./FooterComponent/FooterComponent";
 import LoginComponent from "./LoginComponent/LoginComponent";
-
+import ManagerCusInfoComponent from "./ManagerDashboard/ManagerCusInfoComponent/ManagerCusInfoComponent";
+import ManagerUpdate from "./ManagerDashboard/ManagerUpdatePage/ManagerUpdate";
 import Axios from "axios";
 
 function App() {
@@ -96,7 +97,7 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          <CustomerInfoUpdate />
+          <ManagerUpdate />
         </Route>
 
         <Route exact path="/manager/customer/:id">
@@ -108,7 +109,7 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          <Dashboard />
+          <ManagerCusInfoComponent />
         </Route>
 
         <Route path="/manager">

@@ -5,4 +5,16 @@
 
 .manager-content {
   height: 100vh;
+  margin-top: 60px;
+}
+
+.card {
+  all: unset;
+  border: none;
+
+}
+
+.card-header {
+  font-size: 20px;
+  text-align: center;
 }

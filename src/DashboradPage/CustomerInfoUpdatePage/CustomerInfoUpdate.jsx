@@ -1,14 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import React from "react";
 import { useParams, useLocation, useHistory } from "react-router-dom";
-import useSWR from "swr";
-import { Form, Container, Button, Row, Col } from "react-bootstrap";
+import { Form, Container, Button} from "react-bootstrap";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
 import '../../RegistrationPage/Registration.css';
 
-import NavigationComponent from "../../NavigationComponent/NavigationComponent";
 
 export default function CustomerInfoUpdate(){
 
@@ -35,7 +32,6 @@ export default function CustomerInfoUpdate(){
             address: address,
             customer_id: customer_id,
             doctor_id: doctor_id,
-            auth_type: auth_type,
         },
         validationSchema: Yup.object({
             first_name: Yup.string().required("First name is required"),

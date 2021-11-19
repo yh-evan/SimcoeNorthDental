@@ -98,6 +98,73 @@ const NavigationComponent = ({
         </div>
       </Nav>
     );
+  } else if (role === "doctor") {
+    return (
+      <Nav
+        className={`navigation ${show && turnOn && "navigation_hide"} ${
+          !turnOn && "navigation_freeze"
+        }`}
+      >
+        <a href="/home" className="navigation-left">
+          <div>
+            <img
+              className="navigation-left-img"
+              src="/img/Logo_with_name.png"
+              alt="logo"
+            ></img>
+          </div>
+        </a>
+        <div className="navigation-right">
+          <Nav className="me-auto">
+            <NavDropdown
+              class="navigation-right-service"
+              title="Service"
+              id="collasible-nav-dropdown"
+            >
+              <NavDropdown.Item href="/services">
+                Teeth cleaning and gum diseases
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/services">Fillings</NavDropdown.Item>
+              <NavDropdown.Item href="/services">Extractions</NavDropdown.Item>
+              <NavDropdown.Item href="/services">Sedation</NavDropdown.Item>
+              <NavDropdown.Item href="/services">
+                Crowns and Veneer
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/services">
+                Bridges and Dentures
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/services">
+                Dental Implants
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/services">
+                Dental Emergencies
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/services">
+                Root canal treatment
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/services">
+                Teeth whitening
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link className="navigation-right-about" href="/about">
+              About
+            </Nav.Link>
+            <Nav.Link className="navigation-right-newPatient" href="/register">
+              New Patient
+            </Nav.Link>
+            <button
+              className="navigation-right-login"
+              onClick={() => {
+                history.push(`/manager`);
+              }}
+            >
+              <span>Dr. {capitalize(userName)}</span>
+              <div className="liquid"></div>
+            </button>
+          </Nav>
+        </div>
+      </Nav>
+    );
   } else if (role === "manager") {
     return (
       <Nav
@@ -158,7 +225,7 @@ const NavigationComponent = ({
                 history.push(`/manager`);
               }}
             >
-              <span>{capitalize(userName)}</span>
+              <span>Administrator</span>
               <div className="liquid"></div>
             </button>
           </Nav>

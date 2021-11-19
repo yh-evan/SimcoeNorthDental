@@ -1,8 +1,6 @@
 import "./About.css";
 import React from "react";
 import { MDBRow, MDBCol, MDBCard, MDBCardBody } from "mdbreact";
-import NavigationComponent from "../NavigationComponent/NavigationComponent";
-import FooterComponent from "../FooterComponent/FooterComponent";
 
 const TeamPage = () => {
   return (

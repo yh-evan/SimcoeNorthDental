@@ -2,12 +2,8 @@ import { useState } from "react";
 import { Form, Container, Button, Row, Col } from "react-bootstrap";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
 import './Registration.css';
-
-import NavigationComponent from "../NavigationComponent/NavigationComponent";
 import RegistrationSucc from "./RegistrationSucc";
-import FooterComponent from "../FooterComponent/FooterComponent"
 
 export default function Registration() {
     const [completed, setCompleted] = useState(false);

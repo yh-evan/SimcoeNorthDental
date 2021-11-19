@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import FooterComponent from "../FooterComponent/FooterComponent";
-import NavigationComponent from "../NavigationComponent/NavigationComponent";
 import { useHistory } from "react-router-dom";
 import { Card, Table, Container } from "react-bootstrap";
 

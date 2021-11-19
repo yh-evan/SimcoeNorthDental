@@ -130,6 +130,7 @@
     width: 200px;
     height: 60px;
     border: #bee3db 6px solid;
+    border-radius: 20px;
     box-shadow: 6px 6px 12px #a9cac3,
         -6px -6px 12px #d3fcf3
 }

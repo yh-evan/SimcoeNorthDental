@@ -1,6 +1,4 @@
 import "./ServicepageComponent.css";
-import NavigationComponent from "../NavigationComponent/NavigationComponent";
-import FooterComponent from "../FooterComponent/FooterComponent";
 
 //import { Background, Parallax } from "react-parallax";
 function ServicespageComponent() {

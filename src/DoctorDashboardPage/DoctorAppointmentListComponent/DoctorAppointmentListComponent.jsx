@@ -90,6 +90,25 @@ export default function DoctorAppointmentListComponent({ emp_id }) {
                         });
                     }
                 }
+                onDelete={
+                    function(deletedId){
+                        console.log(deletedId);
+                        fetch(`https://db-customer-appointment-snd.herokuapp.com/api/customerData/${deletedId}`, {
+                                method: "DELETE",
+                            })
+                            .then((res) => {
+                                console.log(res.status);
+                            })
+                            .catch((err) => {
+                                console.log("Error submitting form", err);
+                            });
+
+                        return new Promise((res, rej) => {
+                            setTimeout(() =>{res(deletedId);}, 10)
+                            
+                        });
+                    }
+                }
             />
 
        </div> 

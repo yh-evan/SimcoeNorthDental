@@ -4,6 +4,7 @@ import Axios from "axios";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import '../DashboradPage/dashboard.css';
+import './doctorDashboard.css';
 
 import DoctorAppointmentListComponent from "./DoctorAppointmentListComponent/DoctorAppointmentListComponent";
 
@@ -60,7 +61,7 @@ export default function DoctorDashboard() {
                             <h2 className="dashboard-pic-word">Hello, Dr. {first_name} {last_name}</h2>
                         </div>
                         <div className="dashboard-contain">
-                            <div className="dashboard-info">
+                            <div className="dashboard-info-doctor">
                                 <h3>Basic Information</h3>
                                 <ul className="user-info-li">
                                     <li className="user-infor-lii">
@@ -87,9 +88,8 @@ export default function DoctorDashboard() {
                             </div>
 
 
-                            <div className="dashboard-appointment">
+                            <div className="dashboard-appointment-doctor">
                                 <h3>My Appointments</h3>
-                                <p>|</p>
                                 <DoctorAppointmentListComponent emp_id={emp_id} />
                             </div>
                         </div>

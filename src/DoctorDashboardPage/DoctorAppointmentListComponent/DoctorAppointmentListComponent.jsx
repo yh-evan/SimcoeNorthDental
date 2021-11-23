@@ -66,9 +66,22 @@ export default function DoctorAppointmentListComponent({ emp_id }) {
                 ]}
                 onConfirm={
                     async function(event, action){
-                        if(action === "create")
+                        if(action === "create"){
                             console.log(event);
-
+                            fetch("https://db-customer-appointment-snd.herokuapp.com/api/customerData", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify(event),
+                            })
+                            .then((res) => {
+                                console.log(res.status);
+                            })
+                            .catch((err) => {
+                                console.log("Error submitting form", err);
+                            });
+                        }
                         return new Promise((res, rej) => {
                                 res({
                                     ...event,

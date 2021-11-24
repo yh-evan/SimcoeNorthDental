@@ -2,7 +2,7 @@ import './UserInfoComponent.css'
 
 export default function UserInfoComponent({ data }) {
     console.log(data);
-    const { first_name, last_name, email_address, address, cell_phone, customer_id, doctor_id, role } = data;
+    const { first_name, last_name, email_address, address, cell_phone, customer_id, doctor_id } = data;
     return (
         <div>
             <div>
@@ -16,13 +16,7 @@ export default function UserInfoComponent({ data }) {
                         <div className="user-info-div">Email Address</div>
                         <div className="user-info-divInfo">{email_address}</div>
                     </li>
-                    {/* <li className="user-infor-lii2">
-                        <div className="user-info-div">ID</div>
-                        <div className="user-info-divInfo">
-                                <p className="user-info-p">{customer_id}</p>
-                            
-                        </div>
-                    </li> */}
+              
                 </ul>
             </div>
             <div>

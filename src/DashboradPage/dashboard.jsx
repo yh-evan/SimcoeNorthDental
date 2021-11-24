@@ -3,7 +3,6 @@ import { useParams, Link } from "react-router-dom";
 import useSWR from "swr";
 import Axios from "axios";
 import { useState } from "react";
-import { Redirect } from "react-router";
 import { Container } from "react-bootstrap";
 import './dashboard.css';
 import UserInfoComponent from "./UserInfoComponent/UserInfoComponent";

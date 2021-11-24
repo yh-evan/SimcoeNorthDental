@@ -1,6 +1,5 @@
 import { Scheduler } from "@aldabil/react-scheduler";
 
-import { Table } from "react-bootstrap";
 import useSWR from "swr";
 
 export default function DoctorAppointmentListComponent({ emp_id }) {

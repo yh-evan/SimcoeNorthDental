@@ -1,7 +1,5 @@
 import { useParams, Link, useHistory } from "react-router-dom";
 import useSWR from "swr";
-import Axios from "axios";
-import { useState } from "react";
 import { Container } from "react-bootstrap";
 import './ManagerCusInfoComponent.css';
 import UserInfoComponent from "../../DashboradPage/UserInfoComponent/UserInfoComponent";

@@ -13,7 +13,7 @@ export default function ManagerUpdate(){
     const history = useHistory();
     
     const user = location.state.user;
-    const { first_name, last_name, email_address, address, cell_phone, customer_id, doctor_id, auth_type } = user;
+    const { first_name, last_name, email_address, address, cell_phone, customer_id, doctor_id } = user;
     console.log(user);
 
     const { id } = useParams();

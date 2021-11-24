@@ -22,6 +22,7 @@ import LoginComponent from "./LoginComponent/LoginComponent";
 import ManagerCusInfoComponent from "./ManagerDashboard/ManagerCusInfoComponent/ManagerCusInfoComponent";
 import ManagerUpdate from "./ManagerDashboard/ManagerUpdatePage/ManagerUpdate";
 import Axios from "axios";
+import DoctorAppointmentListComponent from "./DoctorDashboardPage/DoctorAppointmentListComponent/DoctorAppointmentListComponent";
 
 function App() {
   const [isShowLogin, setIsShowLogin] = useState(false);

@@ -30,7 +30,7 @@
 }
 
 .introduction-content h1 {
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
 .hl {
@@ -40,7 +40,7 @@
 }
 
 .introduction-content p {
-  font-size: 1em;
+  font-size: 1rem;
   margin-top: 2vh;
 }
 
@@ -68,13 +68,13 @@
   margin-right: 2vw;
   border-radius: 50px;
   border: none;
-  height: 2vw;
-  width: 8vw;
+  height: 40px;
+  width: 120px;
   background: #00838f;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  font-size: .8vw;
+  font-size: 1rem;
 }
 
 .meetDrHu {
@@ -91,4 +91,35 @@
   background: #F1F5F5;
   box-shadow: inset 5px 5px 10px #e3e6e6,
     inset -5px -5px 10px #ffffff;
+}
+
+@media only screen and (max-width: 1300px) {
+  .introduction {
+    height: 400px;
+  }
+
+  .introduction-right {
+    flex-basis: 100%;
+  }
+
+  .introduction-img-1 {
+    max-width: 400px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .introduction {
+    flex-direction: column-reverse;
+
+    height: 700px;
+  }
+
+  .introduction-content {
+    padding: 20px;
+  }
+
+  .introduction-img-1 {
+    max-width: 90vw;
+  }
 }

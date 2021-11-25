@@ -27,19 +27,19 @@
 
 .navigation-left {
   display: flex;
-  flex-basis: 50%;
+  flex-basis: 40%;
   align-items: center;
   cursor: pointer;
 }
 
 .navigation-left-img {
   margin-left: 4vw;
-  max-width: 420px;
+  max-width: 300px;
 
 }
 
 .navigation-right {
-  flex-basis: 50%;
+  flex-basis: 60%;
   align-items: baseline;
 }
 
@@ -156,4 +156,48 @@
 .dropdown-menu {
   box-shadow: 1px 6px 6px -2px rgba(0, 0, 0, 0.2);
 
+}
+
+@media only screen and (max-width: 860px) {
+  .navigation {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navigation-left {
+    flex-basis: 1;
+  }
+
+  .navigation-left-img {
+    margin-left: 30%;
+  }
+
+  .navigation-right {
+    flex-basis: 50%;
+
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+
+  .navigation-left-img {
+    max-width: 90vw;
+    /* padding: 10px; */
+    margin-left: 5vw;
+  }
+
+  .navigation-right {
+    font-size: .7rem;
+  }
+
+  .me-auto {
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* margin: 0; */
+  }
+
+  .navigation-right-login span {
+    font-size: 12px;
+  }
 }

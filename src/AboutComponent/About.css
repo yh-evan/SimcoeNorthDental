@@ -29,9 +29,10 @@
 
 .about-card {
     color: black;
-    max-width: 22vw;
+    max-width: 21vw;
     margin-left: 20px;
     padding: 50px;
+    margin-top: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px #b3d5ce,
         -5px -5px 10px #c9f1e8;
@@ -45,4 +46,16 @@
     border: 10px #bee3db solid;
     box-shadow: 5px 5px 10px #b3d5ce,
         -5px -5px 10px #c9f1e8;
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-card {
+        all: unset;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px #b3d5ce,
+            -5px -5px 10px #c9f1e8;
+        margin-left: 20px;
+        padding: 50px;
+        margin-top: 20px;
+    }
 }

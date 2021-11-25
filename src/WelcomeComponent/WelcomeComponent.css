@@ -2,6 +2,7 @@
   display: flex;
   height: 100%;
   background: #bee3db;
+
 }
 
 .welcome-left {
@@ -12,7 +13,7 @@
 }
 
 .welcome-left-video {
-  max-width: 21vw;
+  max-width: 450px;
   height: fit-content;
   margin-top: 12vh;
   margin-bottom: 12vh;
@@ -43,14 +44,14 @@
 .welcome-right-content h5 {
   color: #00838f;
   margin-bottom: 1vh;
-  font-size: 1vw;
+  font-size: 1rem;
 }
 
 .welcome-right-content h1 {
   color: #00838f;
   margin-top: 1vh;
   margin-bottom: 2vh;
-  font-size: 4vw;
+  font-size: 3rem;
 }
 
 .welcome-right-button-book {
@@ -60,14 +61,13 @@
   box-shadow: 5px 5px 10px #b3d5ce,
     -5px -5px 10px #c9f1e8;
   border: none;
-  height: 3vw;
-  width: 10vw;
+  height: 40px;
+  max-width: 350px;
+  padding: 0 20px;
   color: #00838f;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  font-size: .8vw;
-
-
+  font-size: 1rem;
 
 }
 
@@ -81,10 +81,33 @@
   border-radius: 50px;
   background-color: #bee3db;
   height: 2vw;
-  width: 16vw;
+  width: 250px;
   color: #00838f;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  font-size: .8vw;
+  font-size: .8rem;
   cursor: default !important;
+}
+
+@media only screen and (max-width: 860px) {
+  .welcome-left-video {
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .welcome {
+    flex-direction: column;
+  }
+
+  .welcome-left {
+    width: 100vw;
+  }
+
+  .welcome-left-video {
+    max-width: 80vw;
+    justify-content: center;
+    margin-bottom: 10px;
+    ;
+  }
 }

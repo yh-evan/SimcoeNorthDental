@@ -149,9 +149,6 @@ const NavigationComponent = ({
             <Nav.Link className="navigation-right-about" href="/about">
               About
             </Nav.Link>
-            <Nav.Link className="navigation-right-newPatient" href="/register">
-              New Patient
-            </Nav.Link>
             <button
               className="navigation-right-login"
               onClick={() => {
@@ -216,9 +213,6 @@ const NavigationComponent = ({
             <Nav.Link className="navigation-right-about" href="/about">
               About
             </Nav.Link>
-            <Nav.Link className="navigation-right-newPatient" href="/register">
-              New Patient
-            </Nav.Link>
             <button
               className="navigation-right-login"
               onClick={() => {
@@ -282,9 +276,6 @@ const NavigationComponent = ({
             </NavDropdown>
             <Nav.Link className="navigation-right-about" href="/about">
               About
-            </Nav.Link>
-            <Nav.Link className="navigation-right-newPatient" href="/register">
-              New Patient
             </Nav.Link>
             <button
               className="navigation-right-login"

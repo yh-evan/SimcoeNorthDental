@@ -10,14 +10,6 @@
   cursor: default;
 }
 
-/* .intro h1 {
-  color: #00838f;
-}
-
-.intro h7 {
-  color: white;
-} */
-
 
 .intro-content {
   position: relative;
@@ -58,6 +50,22 @@
   font-weight: bolder;
 }
 
-/* .intro-card-text p {
-  color: white
-} */
+@media only screen and (max-width: 1300px) {
+  .intro-card-img img {
+    max-width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .intro-card {
+    flex-direction: column;
+  }
+
+  .intro-card-img img {
+    max-width: 100%;
+  }
+
+  .intro-card-text {
+    padding: 20px;
+  }
+}

@@ -28,29 +28,31 @@ function FooterComponent() {
             <a href="/services">Teeth whitening</a>
           </div>
           {/* Colum2 */}
-          <div className="FooterComponent-Practice">
-            <h2>Practice</h2>
-            <a className="pratice" href="/home">
-              Home
-            </a>
-            <a className="pratice" href="/about">
-              About
-            </a>
-            <a className="pratice" href="/register">
-              New Patients
-            </a>
-          </div>
+          <div className="FooterComponent-for-small-screen">
+            <div className="FooterComponent-Practice">
+              <h2>Practice</h2>
+              <a className="pratice" href="/home">
+                Home
+              </a>
+              <a className="pratice" href="/about">
+                About
+              </a>
+              <a className="pratice" href="/register">
+                New Patients
+              </a>
+            </div>
 
-          {/* Colum4 */}
-          <div className="FooterComponent-review">
-            <h2>Review US</h2>
+            {/* Colum4 */}
+            <div className="FooterComponent-review">
+              <h2>Review US</h2>
 
-            <a href="https://www.google.com/" id="googlesearch">
-              Google
-            </a>
-            <a href="https://www.facebook.com//" id="facebookSocial">
-              Facebook
-            </a>
+              <a href="https://www.google.com/" id="googlesearch">
+                Google
+              </a>
+              <a href="https://www.facebook.com//" id="facebookSocial">
+                Facebook
+              </a>
+            </div>
           </div>
           {/* Colum3 */}
           <div className="FooterComponent-Office">

@@ -110,3 +110,27 @@ h2 {
   vertical-align: middle;
 
 }
+
+.FooterComponent-for-small-screen {
+  display: block;
+}
+
+@media only screen and (max-width: 950px) {
+  .FooterComponent-Practice {
+    height: 50%;
+  }
+
+  .FooterComponent-review {
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .FooterComponent-main {
+    flex-direction: column;
+  }
+
+  .FooterComponent-main div {
+    margin-top: 20px;
+  }
+}

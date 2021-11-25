@@ -1,6 +1,5 @@
 .MapComponent-element {
   display: flex;
-
 }
 
 .MapComponent-container {
@@ -11,8 +10,8 @@
 
 .MapComponent-map {
   display: flex;
-  height: 25vw;
-  width: 30vw;
+  height: 500px;
+  width: 600px;
   margin-left: -60px;
   border-radius: 40px;
   border: 20px solid #bee3db;
@@ -67,7 +66,7 @@
 .MapComponent-info {
   display: flex;
   flex-direction: column;
-  font-size: .8vw;
+  font-size: 1rem;
   font-weight: 700;
   background-color: white;
   padding: 10px 30px;
@@ -102,4 +101,54 @@
   justify-content: space-between;
   color: #000;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1300px) {
+  .MapComponent-map {
+    height: 400px;
+    width: 500px;
+  }
+
+  .text-contact {
+    width: 300px;
+    height: auto;
+    left: 62vw;
+  }
+
+  .MapComponent-info {
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .MapComponent-container {
+    display: block;
+  }
+
+  .MapComponent-container {
+    margin-left: 20%;
+  }
+
+  .text-contact {
+    position: relative;
+    left: 0;
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .MapComponent-container {
+    margin: 0;
+  }
+
+  .MapComponent-map {
+    width: 100vw;
+    margin-left: -50px;
+  }
+
+  .text-contact {
+
+    margin-left: -15px;
+  }
+
 }

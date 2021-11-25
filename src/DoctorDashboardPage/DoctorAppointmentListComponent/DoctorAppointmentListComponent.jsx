@@ -80,6 +80,22 @@ export default function DoctorAppointmentListComponent({ emp_id }) {
                             .catch((err) => {
                                 console.log("Error submitting form", err);
                             });
+                        }else if(action === "edit"){
+                            console.log(event);
+                            fetch(`https://db-customer-appointment-snd.herokuapp.com/api/customerData/${event.event_id}`, {
+                                method: "PUT",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify(event),
+                            })
+                            .then((res) => {
+                                console.log(res.status);
+                
+                            })
+                            .catch((err) => {
+                                console.log("Error submitting form", err);
+                            });
                         }
                         return new Promise((res, rej) => {
                                 res({
@@ -94,6 +110,9 @@ export default function DoctorAppointmentListComponent({ emp_id }) {
                         console.log(deletedId);
                         fetch(`https://db-customer-appointment-snd.herokuapp.com/api/customerData/${deletedId}`, {
                                 method: "DELETE",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
                             })
                             .then((res) => {
                                 console.log(res.status);

@@ -33,9 +33,9 @@ export default function UserAppointmentListComponent({ customer_id }) {
                         customerList.data.map(item =>
                             <tr key={item._id}>
                                 <td>{item.emp_name}</td>
-                                <td>{item.date.slice(0, 10)} / {item.date.slice(12,16)}</td>
+                                <td>{item.start.slice(0, 10)} / {item.start.slice(12,16)}</td>
                                 <td>{item.type}</td>
-                                <td>{item.description}</td>
+                                <td>{item.title}</td>
                             </tr> 
                         )
                    }

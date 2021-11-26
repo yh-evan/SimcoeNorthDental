@@ -7,6 +7,7 @@ import '../DashboradPage/dashboard.css';
 import './doctorDashboard.css';
 
 import DoctorAppointmentListComponent from "./DoctorAppointmentListComponent/DoctorAppointmentListComponent";
+import PatientsList from "./PatientsListComponent/PatientsList";
 
 export default function DoctorDashboard() {
     const { id } = useParams();
@@ -85,6 +86,9 @@ export default function DoctorDashboard() {
                                 </ul>
                                 
                                 <Link to={{ pathname: `/dashboard/doctor/${id}/update`, state: {user: data} }}>Update Info</Link>
+                                <p>-----------------------</p>
+                                <h3>My Patients</h3>
+                                <PatientsList emp_id={emp_id} />
                             </div>
 
 

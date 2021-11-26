@@ -64,7 +64,7 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          {userName != null && <VideoChatComponent />}
+          <VideoChatComponent />
         </Route>
         <Route path="/services">
           <NavigationComponent

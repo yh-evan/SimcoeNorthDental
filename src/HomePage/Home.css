@@ -17,6 +17,7 @@
   margin: 5% auto;
   left: 0;
   right: 0;
+  top: 5vh;
 
 }
 
@@ -139,4 +140,18 @@ button::after {
     clip-path: var(--slice-1);
     transform: translate(0);
   }
+}
+
+@media only screen and (max-width: 900px) {
+  .showLogin {
+    top: 100px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .showLogin {
+    width: 80vw;
+
+  }
+
 }

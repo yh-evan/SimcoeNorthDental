@@ -13,6 +13,12 @@ export default function Home() {
         <WhatWeCanDoComponent></WhatWeCanDoComponent>
         <ServicesComponent></ServicesComponent>
         <MapComponent></MapComponent>
+        <div className="liveClinic-container">
+          <a href="/video">
+            
+            <button><img src="/img/logo.png" alt="logo"/> Live Clinic</button>
+          </a>
+        </div>
       </div>
     );
   

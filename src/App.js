@@ -22,7 +22,7 @@ import LoginComponent from "./LoginComponent/LoginComponent";
 import ManagerCusInfoComponent from "./ManagerDashboard/ManagerCusInfoComponent/ManagerCusInfoComponent";
 import ManagerUpdate from "./ManagerDashboard/ManagerUpdatePage/ManagerUpdate";
 import Axios from "axios";
-import DoctorAppointmentListComponent from "./DoctorDashboardPage/DoctorAppointmentListComponent/DoctorAppointmentListComponent";
+import VideoChatComponent from "./VideoChatComponent/VideoChatComponent";
 
 function App() {
   const [isShowLogin, setIsShowLogin] = useState(false);
@@ -55,6 +55,17 @@ function App() {
   return (
     <div className="App">
       <Switch>
+        <Route path="/video">
+          <NavigationComponent
+            handleLoginClick={handleLoginClick}
+            userName={userName}
+            userID={userID}
+            turnOn={false}
+            role={role}
+          ></NavigationComponent>
+          <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
+          {userName != null && <VideoChatComponent />}
+        </Route>
         <Route path="/services">
           <NavigationComponent
             handleLoginClick={handleLoginClick}
@@ -100,7 +111,7 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          <ManagerUpdate />
+          {role === "manager" && <ManagerUpdate />}
         </Route>
 
         <Route exact path="/manager/customer/:id">
@@ -112,7 +123,7 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          <ManagerCusInfoComponent />
+          {role === "manager" && <ManagerCusInfoComponent />}
         </Route>
 
         <Route path="/manager">
@@ -124,7 +135,7 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          <ManagerDashboard />
+          {role === "manager" && <ManagerDashboard />}
         </Route>
 
         <Route path="/dashboard/doctor/:id/update">

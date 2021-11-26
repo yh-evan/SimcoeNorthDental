@@ -33,60 +33,62 @@ const NavigationComponent = ({
     };
   }, []);
 
-  if (userName == null) {
-    return (
-      <Nav
-        className={`navigation ${show && turnOn && "navigation_hide"} ${
-          !turnOn && "navigation_freeze"
-        }`}
-      >
-        <a href="/home" className="navigation-left">
-          <div>
-            <img
-              className="navigation-left-img"
-              src="/img/Logo_with_name.png"
-              alt="logo"
-            ></img>
-          </div>
-        </a>
-        <div className="navigation-right">
-          <Nav className="me-auto">
-            <NavDropdown
-              class="navigation-right-service"
-              title="Service"
-              id="collasible-nav-dropdown"
-            >
-              <NavDropdown.Item href="/services">
-                Teeth cleaning and gum diseases
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">Fillings</NavDropdown.Item>
-              <NavDropdown.Item href="/services">Extractions</NavDropdown.Item>
-              <NavDropdown.Item href="/services">Sedation</NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Crowns and Veneer
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Bridges and Dentures
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Dental Implants
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Dental Emergencies
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Root canal treatment
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Teeth whitening
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link className="navigation-right-about" href="/about">
-              About
-            </Nav.Link>
+  return (
+    <Nav
+      className={`navigation ${show && turnOn && "navigation_hide"} ${
+        !turnOn && "navigation_freeze"
+      }`}
+    >
+      <a href="/home" className="navigation-left">
+        <div>
+          <img
+            className="navigation-left-img"
+            src="/img/Logo_with_name.png"
+            alt="logo"
+          ></img>
+        </div>
+      </a>
+      <div className="navigation-right">
+        <Nav className="me-auto">
+          <NavDropdown
+            class="navigation-right-service"
+            title="Service"
+            id="collasible-nav-dropdown"
+          >
+            <NavDropdown.Item href="/services">
+              Teeth cleaning and gum diseases
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/services">Fillings</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Extractions</NavDropdown.Item>
+            <NavDropdown.Item href="/services">Sedation</NavDropdown.Item>
+            <NavDropdown.Item href="/services">
+              Crowns and Veneer
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/services">
+              Bridges and Dentures
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/services">
+              Dental Implants
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/services">
+              Dental Emergencies
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/services">
+              Root canal treatment
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/services">
+              Teeth whitening
+            </NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link className="navigation-right-about" href="/about">
+            About
+          </Nav.Link>
+          {userName == null && (
             <Nav.Link className="navigation-right-newPatient" href="/register">
               New Patient
             </Nav.Link>
+          )}
+          {userName == null && (
             <button
               className="navigation-right-login"
               onClick={handleLoginClick}
@@ -94,61 +96,8 @@ const NavigationComponent = ({
               <span>Login</span>
               <div className="liquid"></div>
             </button>
-          </Nav>
-        </div>
-      </Nav>
-    );
-  } else if (role === "doctor") {
-    return (
-      <Nav
-        className={`navigation ${show && turnOn && "navigation_hide"} ${
-          !turnOn && "navigation_freeze"
-        }`}
-      >
-        <a href="/home" className="navigation-left">
-          <div>
-            <img
-              className="navigation-left-img"
-              src="/img/Logo_with_name.png"
-              alt="logo"
-            ></img>
-          </div>
-        </a>
-        <div className="navigation-right">
-          <Nav className="me-auto">
-            <NavDropdown
-              class="navigation-right-service"
-              title="Service"
-              id="collasible-nav-dropdown"
-            >
-              <NavDropdown.Item href="/services">
-                Teeth cleaning and gum diseases
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">Fillings</NavDropdown.Item>
-              <NavDropdown.Item href="/services">Extractions</NavDropdown.Item>
-              <NavDropdown.Item href="/services">Sedation</NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Crowns and Veneer
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Bridges and Dentures
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Dental Implants
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Dental Emergencies
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Root canal treatment
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Teeth whitening
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link className="navigation-right-about" href="/about">
-              About
-            </Nav.Link>
+          )}
+          {role === "doctor" && (
             <button
               className="navigation-right-login"
               onClick={() => {
@@ -158,125 +107,8 @@ const NavigationComponent = ({
               <span>Dr. {capitalize(userName)}</span>
               <div className="liquid"></div>
             </button>
-          </Nav>
-        </div>
-      </Nav>
-    );
-  } else if (role === "manager") {
-    return (
-      <Nav
-        className={`navigation ${show && turnOn && "navigation_hide"} ${
-          !turnOn && "navigation_freeze"
-        }`}
-      >
-        <a href="/home" className="navigation-left">
-          <div>
-            <img
-              className="navigation-left-img"
-              src="/img/Logo_with_name.png"
-              alt="logo"
-            ></img>
-          </div>
-        </a>
-        <div className="navigation-right">
-          <Nav className="me-auto">
-            <NavDropdown
-              class="navigation-right-service"
-              title="Service"
-              id="collasible-nav-dropdown"
-            >
-              <NavDropdown.Item href="/services">
-                Teeth cleaning and gum diseases
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">Fillings</NavDropdown.Item>
-              <NavDropdown.Item href="/services">Extractions</NavDropdown.Item>
-              <NavDropdown.Item href="/services">Sedation</NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Crowns and Veneer
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Bridges and Dentures
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Dental Implants
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Dental Emergencies
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Root canal treatment
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Teeth whitening
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link className="navigation-right-about" href="/about">
-              About
-            </Nav.Link>
-            <button
-              className="navigation-right-login"
-              onClick={() => {
-                history.push(`/manager`);
-              }}
-            >
-              <span>Administrator</span>
-              <div className="liquid"></div>
-            </button>
-          </Nav>
-        </div>
-      </Nav>
-    );
-  } else {
-    return (
-      <Nav
-        className={`navigation ${show && turnOn && "navigation_hide"} ${
-          !turnOn && "navigation_freeze"
-        }`}
-      >
-        <a href="/home" className="navigation-left">
-          <div>
-            <img
-              className="navigation-left-img"
-              src="/img/Logo_with_name.png"
-              alt="logo"
-            ></img>
-          </div>
-        </a>
-        <div className="navigation-right">
-          <Nav className="me-auto">
-            <NavDropdown
-              class="navigation-right-service"
-              title="Service"
-              id="collasible-nav-dropdown"
-            >
-              <NavDropdown.Item href="/services">
-                Teeth cleaning and gum diseases
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">Fillings</NavDropdown.Item>
-              <NavDropdown.Item href="/services">Extractions</NavDropdown.Item>
-              <NavDropdown.Item href="/services">Sedation</NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Crowns and Veneer
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Bridges and Dentures
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Dental Implants
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Dental Emergencies
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Root canal treatment
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/services">
-                Teeth whitening
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link className="navigation-right-about" href="/about">
-              About
-            </Nav.Link>
+          )}
+          {role === "customer" && (
             <button
               className="navigation-right-login"
               onClick={() => {
@@ -286,11 +118,22 @@ const NavigationComponent = ({
               <span>{capitalize(userName)}</span>
               <div className="liquid"></div>
             </button>
-          </Nav>
-        </div>
-      </Nav>
-    );
-  }
+          )}
+          {role === "manager" && (
+            <button
+              className="navigation-right-login"
+              onClick={() => {
+                history.push(`/manager`);
+              }}
+            >
+              <span>Administrator</span>
+              <div className="liquid"></div>
+            </button>
+          )}
+        </Nav>
+      </div>
+    </Nav>
+  );
 };
 
 export default NavigationComponent;

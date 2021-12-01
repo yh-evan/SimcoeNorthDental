@@ -19,7 +19,7 @@ export default function Dashboard() {
 
     const logout = () => {
         
-        Axios.get("http://localhost:3001/logout", {}).then((response) => {
+        Axios.get("https://simcoeauth.herokuapp.com/api/logout", {}).then((response) => {
             localStorage.clear();    
           }
         ).then(setRedirect(true));

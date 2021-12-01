@@ -13,7 +13,7 @@ const LoginForm = ({ isShowLogin }) => {
   const [role, setRole] = useState("customer");
 
   const login = () => {
-    Axios.post("https://simcoeauth.herokuapp.com/login", {
+    Axios.post("https://simcoeauth.herokuapp.com/api/login", {
       username: username,
       password: password,
       role: role,

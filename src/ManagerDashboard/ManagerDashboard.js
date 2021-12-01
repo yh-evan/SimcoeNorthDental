@@ -15,7 +15,7 @@ function ManagerDashboard() {
   let history = useHistory();
 
   const logout = () => {
-    Axios.get("http://localhost:3001/logout", {})
+    Axios.get("https://simcoeauth.herokuapp.com/api/logout", {})
       .then((response) => {
         localStorage.clear();
       })

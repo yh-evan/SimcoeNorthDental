@@ -39,7 +39,7 @@ function App() {
       duration: 2000,
     });
     AOS.refresh();
-    Axios.get("https://secure-mountain-19537.herokuapp.com/login", {
+    Axios.get("https://simcoeauth.herokuapp.com/login", {
       headers: { "x-access-token": localStorage.getItem("token") },
     }).then((response) => {
       if (response.data.loggedIn === true) {

@@ -9,7 +9,7 @@ import Peer from "simple-peer";
 import io from "socket.io-client";
 import "./VideoChatComponent.css";
 
-const socket = io.connect("http://localhost:3002");
+const socket = io.connect("https://video-chat-roan-chi.vercel.app");
 function App() {
   const [me, setMe] = useState("");
   const [stream, setStream] = useState();

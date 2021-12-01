@@ -9,7 +9,7 @@ import Peer from "simple-peer";
 import io from "socket.io-client";
 import "./VideoChatComponent.css";
 
-const socket = io.connect("https://simcoelogin.herokuapp.com");
+const socket = io.connect("https://simcoevideo.herokuapp.com");
 function App() {
   const [me, setMe] = useState("");
   const [stream, setStream] = useState();

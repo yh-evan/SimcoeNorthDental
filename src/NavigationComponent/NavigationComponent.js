@@ -51,7 +51,7 @@ const NavigationComponent = ({
       <div className="navigation-right">
         <Nav className="me-auto">
           <NavDropdown
-            class="navigation-right-service"
+            className="navigation-right-service"
             title="Service"
             id="collasible-nav-dropdown"
           >

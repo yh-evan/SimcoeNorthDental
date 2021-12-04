@@ -12,7 +12,7 @@ const Login = ({ isShowLogin }) => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    fetch("http://localhost:3001/api/login", {
+    fetch("https://simcoeauth.herokuapp.com/api/login", {
       method: "POST",
       body: JSON.stringify({
         username: username,

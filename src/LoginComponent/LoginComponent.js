@@ -46,7 +46,7 @@ const Login = ({ isShowLogin }) => {
       {loginState ? (
         <div className="loggedIn">
           <a className="loggedIn-text" href="/">
-            <p>You have successfully logged in!</p>
+            You have successfully logged in!
           </a>
         </div>
       ) : (

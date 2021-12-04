@@ -110,6 +110,7 @@ input:-webkit-autofill {
   margin: auto;
   flex-direction: column;
   justify-content: center !important;
+  text-align: center !important;
   width: 200px;
   height: 100px;
   color: #00838f !important;

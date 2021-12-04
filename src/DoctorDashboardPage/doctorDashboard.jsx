@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
 import useSWR from "swr";
-import Axios from "axios";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import '../DashboradPage/dashboard.css';
@@ -18,11 +17,9 @@ export default function DoctorDashboard() {
     console.log(user);
 
     const logout = () => {
-        
-        Axios.get("http://localhost:3001/logout", {}).then((response) => {
-            localStorage.clear();    
-          }
-        ).then(setRedirect(true));
+        localStorage.clear();
+        localStorage.removeItem("RESULT");
+        setRedirect(true);
       };
 
 

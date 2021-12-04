@@ -21,7 +21,6 @@ import FooterComponent from "./FooterComponent/FooterComponent";
 import LoginComponent from "./LoginComponent/LoginComponent";
 import ManagerCusInfoComponent from "./ManagerDashboard/ManagerCusInfoComponent/ManagerCusInfoComponent";
 import ManagerUpdate from "./ManagerDashboard/ManagerUpdatePage/ManagerUpdate";
-import Axios from "axios";
 import VideoChatComponent from "./VideoChatComponent/VideoChatComponent";
 
 function App() {
@@ -39,17 +38,14 @@ function App() {
       duration: 2000,
     });
     AOS.refresh();
-    Axios.get("https://simcoeauth.herokuapp.com/api/login", {
-      headers: { "x-access-token": localStorage.getItem("token") },
-    }).then((response) => {
-      if (response.data.loggedIn === true) {
-        setUserID(response.data.user._id);
-        setUserName(response.data.user.first_name);
-        setRole(response.data.user.role);
-      } else {
-        console.log(`hello`);
-      }
-    });
+    if (localStorage.getItem("RESULT") != null) {
+      console.log("HERE!!!!!!!!!!!!" + localStorage.getItem("RESULT"));
+      let currentUser = JSON.parse(localStorage.getItem("RESULT"));
+      console.log(JSON.parse(localStorage.getItem("RESULT")));
+      setUserID(currentUser.userId);
+      setUserName(currentUser.username);
+      setRole(currentUser.role);
+    }
   }, []);
 
   return (

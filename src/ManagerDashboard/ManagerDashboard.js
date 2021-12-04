@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Card, Table, Container } from "react-bootstrap";
-import Axios from "axios";
-
 import React from "react";
-
 import "./ManagerDashboard.css";
 
 function ManagerDashboard() {
@@ -15,11 +12,9 @@ function ManagerDashboard() {
   let history = useHistory();
 
   const logout = () => {
-    Axios.get("https://simcoeauth.herokuapp.com/api/logout", {})
-      .then((response) => {
-        localStorage.clear();
-      })
-      .then(setRedirect(true));
+    localStorage.clear();
+    localStorage.removeItem("RESULT");
+    setRedirect(true);
   };
 
   useEffect(() => {

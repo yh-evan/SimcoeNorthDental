@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 //import { useEffect, useState } from "react";
 import useSWR from "swr";
-import Axios from "axios";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import './dashboard.css';
@@ -18,13 +17,10 @@ export default function Dashboard() {
     //console.log(user);
 
     const logout = () => {
-        
-        Axios.get("https://simcoeauth.herokuapp.com/api/logout", {}).then((response) => {
-            localStorage.clear();    
-          }
-        ).then(setRedirect(true));
+        localStorage.clear();
+        localStorage.removeItem("RESULT");
+        setRedirect(true);
       };
-
 
 
     if(error)

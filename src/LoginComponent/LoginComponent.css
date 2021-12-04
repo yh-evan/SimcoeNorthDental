@@ -107,9 +107,9 @@ input:-webkit-autofill {
 .loggedIn-text {
   all: unset;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: auto;
+  flex-direction: column;
+  justify-content: center !important;
   width: 200px;
   height: 100px;
   color: #00838f !important;

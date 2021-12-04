@@ -105,6 +105,7 @@
     box-shadow: 6px 6px 12px #a9cac3,
         -6px -6px 12px #d3fcf3 !important;
     transition: box-shadow 1s !important;
+    padding-top: 50%;
 }
 
 .goodbye-text:hover {

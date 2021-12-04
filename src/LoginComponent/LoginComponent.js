@@ -12,7 +12,7 @@ const Login = ({ isShowLogin }) => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    fetch("https://auth-api-dental.herokuapp.com/api/login", {
+    fetch("api/login", {
       method: "POST",
       body: JSON.stringify({
         username: username,

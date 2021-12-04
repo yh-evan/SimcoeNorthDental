@@ -2,6 +2,7 @@
   "name": "simcoe-north-dental",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://auth-api-dental.herokuapp.com/",
   "dependencies": {
     "@aldabil/react-scheduler": "^2.0.0",
     "@babel/core": "^7.16.0",

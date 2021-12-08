@@ -4,6 +4,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import './Registration.css';
 import RegistrationSucc from "./RegistrationSucc";
+import { Parallax } from "react-parallax";
+
 
 export default function Registration() {
     const [completed, setCompleted] = useState(false);
@@ -74,6 +76,7 @@ export default function Registration() {
       }
 
     return (
+        <Parallax bgImage="/img/background.png" strength={800}>
         <div  className="register-container">
             <div className="register-main">
                 <Container fluid className="signup-form register-div">
@@ -177,5 +180,6 @@ export default function Registration() {
                 </Container>
             </div>
         </div>
+        </Parallax>
     );
 }

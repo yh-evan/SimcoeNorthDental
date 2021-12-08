@@ -107,7 +107,16 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          {role === "manager" && <ManagerUpdate />}
+          {role === "manager" ? (
+            <ManagerUpdate />
+          ) : (
+            <div className="goodbye">
+              <a className="goodbye-text" href="/">
+                <h1>Sorry, your authentication is invalid</h1>
+                <p>Please login as manager!</p>
+              </a>
+            </div>
+          )}
         </Route>
 
         <Route exact path="/manager/customer/:id">
@@ -119,7 +128,16 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          {role === "manager" && <ManagerCusInfoComponent />}
+          {role === "manager" ? (
+            <ManagerCusInfoComponent />
+          ) : (
+            <div className="goodbye">
+              <a className="goodbye-text" href="/">
+                <h1>Sorry, your authentication is invalid</h1>
+                <p>Please login as manager!</p>
+              </a>
+            </div>
+          )}
         </Route>
 
         <Route path="/manager">
@@ -131,7 +149,16 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          {role === "manager" && <ManagerDashboard />}
+          {role === "manager" ? (
+            <ManagerDashboard />
+          ) : (
+            <div className="goodbye">
+              <a className="goodbye-text" href="/">
+                <h1>Sorry, your authentication is invalid</h1>
+                <p>Please login as manager!</p>
+              </a>
+            </div>
+          )}
         </Route>
 
         <Route path="/dashboard/doctor/:id/update">
@@ -155,7 +182,16 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          <DoctorDashboard />
+          {role === "doctor" ? (
+            <DoctorDashboard />
+          ) : (
+            <div className="goodbye">
+              <a className="goodbye-text" href="/">
+                <h1>Sorry, your authentication is invalid</h1>
+                <p>Please login as manager!</p>
+              </a>
+            </div>
+          )}
         </Route>
 
         <Route path="/dashboard/:id/update">
@@ -179,7 +215,16 @@ function App() {
             role={role}
           ></NavigationComponent>
           <LoginComponent isShowLogin={isShowLogin}></LoginComponent>
-          <Dashboard />
+          {role === "customer" ? (
+            <Dashboard />
+          ) : (
+            <div className="goodbye">
+              <a className="goodbye-text" href="/">
+                <h1>Sorry, your authentication is invalid</h1>
+                <p>Please login as manager!</p>
+              </a>
+            </div>
+          )}
         </Route>
 
         <Route path="/">

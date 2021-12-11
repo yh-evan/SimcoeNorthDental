@@ -4,6 +4,8 @@ import { useParams, useLocation, useHistory } from "react-router-dom";
 import { Form, Container, Button} from "react-bootstrap";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { Parallax } from "react-parallax";
+
 import '../../RegistrationPage/Registration.css';
 
 
@@ -81,6 +83,8 @@ export default function ManagerUpdate(){
 
 
     return (
+        <Parallax bgImage="/img/background.png" strength={800}>
+
         <div  className="register-container">
             
             <main className="register-main">
@@ -168,5 +172,6 @@ export default function ManagerUpdate(){
                 </Container>
             </main>
         </div>
+        </Parallax>
     );
 }

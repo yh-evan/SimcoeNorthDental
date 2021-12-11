@@ -5,6 +5,8 @@ import { Form, Container, Button} from "react-bootstrap";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import '../../RegistrationPage/Registration.css';
+import { Parallax } from "react-parallax";
+
 
 
 export default function CustomerInfoUpdate(){
@@ -81,6 +83,7 @@ export default function CustomerInfoUpdate(){
 
 
     return (
+        <Parallax bgImage="/img/background.png" strength={800}>
         <div  className="register-container">
             
             <main className="register-main">
@@ -168,5 +171,6 @@ export default function CustomerInfoUpdate(){
                 </Container>
             </main>
         </div>
+        </Parallax>
     );
 }

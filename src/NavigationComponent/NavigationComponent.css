@@ -46,7 +46,7 @@
 .me-auto {
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: flex-end;
 
   align-items: center;
   height: 100%;
